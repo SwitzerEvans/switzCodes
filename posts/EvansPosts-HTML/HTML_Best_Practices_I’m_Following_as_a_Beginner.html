@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="../../assets/switzcodeslogo.png" type="image/png">
+
+    <!-- ✅ Stylesheet -->
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <div class="body_container">
+        <div class="hamburger-menu">
+            <div class="hamburger-menu-link">
+                <span id="close-hamurger">X</span>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../index.html">Home</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../quickLinks/about/about.html">About</a>
+            </div>
+
+            <div id="hamburger-contact" class="hamburger-menu-link">
+                <a href="../../quickLinks/contact/contact.html">Contact</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </div>
+        </div>
+
+        <header class="nav-search">
+            <div class="fore_container">
+                <h1>switz<span>Codes</span></h1>
+                <div class="head_link">
+                    <a href="../../index.html">Home</a>
+                    <a href="../../quickLinks/about/about.html">About</a>
+                    <a href="../../quickLinks/contact/contact.html">Contact</a>
+                </div>
+
+                <div class="header-icons">
+                    <img src="../../assets/search.png" class="search-icon">
+                    <div class="hamburg_icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="head-icon">
+                    <input type="text" placeholder="search posts..." id="search-input-desktop"
+                        oninput="searchPostsDesktop()">
+                    <div class="search-desktop">
+                        <div id="search-result-desktop"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="search-input-mobile" class="search">
+                <span class="js-close-mobile-search">X</span>
+                <div class="search-container">
+                    <input type="text" placeholder="Search Posts..." id="search_input" oninput="searchPostsMobile()">
+                </div>
+                <div id="search-result"></div>
+            </div>
+        </header>
+
+        <div class="button_container">
+            <nav>
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </nav>
+        </div>
+
+        <main class="main_container">
+            <div class="mainposts_container" id="main-content">
+
+                <section class="postdiv_container">
+                    <h1>📄 HTML Best Practices I’m Following as a Beginner - Simple Rules for Better Web Pages</h1>
+                    <p class="date">📅 October 12, 2025</p>
+                    <p>✍️ By Evans</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <p>Hey guys! 👋</p>
+                    <p>
+                        After writing several HTML pages, I started noticing that my early code looked... messy 😅.
+                        Sometimes tags weren’t closed, indentation was off, or I forgot what a section even did.
+                    </p>
+                    <p>So, I decided to build some good HTML habits — small things that make my code cleaner, easier to
+                        read, and more professional.</p>
+                    <p>Here are the best practices I’ve been following as I grow as a beginner web developer. 👇</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧱Always Use the Proper HTML Structure</h3>
+                    <p>Every page should start with the basic HTML skeleton:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title>My Web Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    <span id="comment">&lt;!-- Page content goes here --&gt;</span>
+  &lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
+                    <p>Having this structure helps browsers read your page correctly and keeps your files organized.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>✍️ Keep Your Code Indented and Neat</h3>
+
+                    <p>Indenting your code makes it so much easier to see which tags belong together.</p>
+                    <p>Example:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;div&gt;
+  &lt;h2&gt;My Favorite Quotes&lt;/h2&gt;
+  &lt;p&gt;“Code is like humor. When you have to explain it, it’s bad.”&lt;/p&gt;
+&lt;/div&gt;
+                        </code></pre>
+                    </div>
+                    <p>Good indentation = easy debugging + happy developer 😄</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🔤 Use Lowercase Tags and Proper Attribute Quotes</h3>
+                    <p>
+                        I used to write things like &lt;P&lt; or &lt;IMG SRC=image.jpg&gt; — but HTML5 prefers lowercase
+                        tags and quoted attributes:
+                    </p>
+                    <p>✅ Correct:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;img src="image.jpg" alt="A sample image"&gt;
+                        </code></pre>
+                    </div>
+                    <p>❌ Wrong:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;IMG SRC=image.jpg&gt;
+                            </code></pre>
+                    </div>
+                    <p>Consistency makes your code cleaner and easier to maintain.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>💬 Comment Your Code</h3>
+                    <p>Adding comments helps you remember what each section does.</p>
+                    <div class="code_container">
+                        <pre><code>
+<span id="comment">&lt;!-- Navigation Bar --&gt;</span>
+&lt;nav&gt; ... &lt;/nav&gt;
+                        </code></pre>
+                    </div>
+                    <p>When you revisit your project weeks later, you’ll thank yourself! 😄</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧠 Use Semantic Tags</h3>
+                    <p>
+                        Instead of using &lt;div&gt; for everything, use tags that describe their purpose:
+                    </p>
+                    <ul>
+                        <li>&lt;header&gt; for top sections</li>
+                        <li>&lt;nav&gt; for navigation links</li>
+                        <li>&lt;main&gt; for main content</li>
+                        <li>&lt;article&gt; for blog posts</li>
+                        <li>&lt;footer&gt; for bottom info</li>
+                    </ul>
+                    <p>Semantic HTML improves SEO and makes your code more meaningful.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧠 Add the alt Attribute to Images</h3>
+                    <p>
+                        The alt attribute describes what an image shows. It’s important for accessibility and helps
+                        search engines understand your content.
+                    </p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;img src="coding.jpg" alt="A person typing HTML code on a laptop"&gt;
+                        </code></pre>
+                    </div>
+                </section>
+                <section class="postdiv_container">
+                    <h3>⚙️ Validate Your HTML</h3>
+                    <p>I learned that even a missing &lt;/div&gt; can break your layout.</p>
+                    <p>You can use the W3C Validator to check your HTML for mistakes:</p>
+                    <p><a href="https://validator.w3.org/">👉 https://validator.w3.org/</a></p>
+                    <p>It’s like a grammar checker — but for your code.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🎯 What I Learned</h3>
+                    <p>
+                        Following these best practices made my projects look more structured and easier to manage.
+                        I now understand that writing clean HTML isn’t just about code — it’s about communication.
+                    </p>
+                    <p>Other developers (and future me 😅) can now easily understand what my pages do.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>👉 What’s Next?</h3>
+                    <p>
+                        Next up, I’ll share Building My First Full HTML Page – What I Learned —
+                        where I’ll put all these lessons together into one complete project! 💪
+                    </p>
+                    <p>See you there!</p>
+                    <p>— Evans 💻</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <div class="navigate_container">
+                        <a href="./Creating_Navigation_Menus_with_HTML.html">← Previous Post</a>
+                        <a href="./Building_My_First_Full_HTML_Page.html">Next Post →</a>
+                    </div>
+                </section>
+
+
+            </div>
+
+            <div class="mainposts_container">
+                <div class="postdiv_container">
+                    <div class="posts_header">
+                        <h3>Posts</h3>
+                    </div>
+                    <div class="overflow_posts">
+                        <ol>
+                            <li><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">Introduction to
+                                    HTML - My First Step Into Web Development</a></li>
+                            <li><a href="./Understanding_the_HTML_Document_Structure.html">Understanding the HTML
+                                    Document Structure - Building the Foundation of Every Web Page</a></li>
+                            <li><a href="./Headings_and_Paragraphs_Writing_Basic_Page_Content.html">Headings and Paragraphs - Writing Basic Page Content</a></li>
+                            <li><a href="./HTML_Text_Formatting.html">HTML Text Formatting - Bold, Italic, Underline and More</a></li>
+                            <li><a href="./Creating_Links_with_the_a_Tag.html">Creating Links with the &lt;a&gt; Tag - Linking Web Pages</a></li>
+                            <li><a href="./Adding_Images_with_img.html">Adding Images with &lt;img&gt; - Making Web Pages Visual</a></li>
+                            <li><a href="./Lists_in_HTML.html">Lists in HTML - Ordered and Unordered Lists</a></li>
+                            <li><a href="./Creating_Tables.html">Creating Tables - Organizing Data in HTML</a></li>
+                            <li><a href="./HTML_Forms.html">HTML Forms - How I Learned to Collect User Input</a></li>
+                            <li><a href="./Input_Types_and_Form_Elements.html">Input Types and Form Elements - Text, Radio, Checkbox, Button</a></li>
+                            <li><a href="./HTML_Attributes.html">HTML Attributes - What Makes Tags More Powerful</a></li>
+                            <li><a href="./HTML_Semantic_Tags.html">HTML Semantic Tags - Writing Clean and Meaningful Code</a></li>
+                            <li><a href="./HTML_Entities.html">HTML Entities - Displaying Special Characters</a></li>
+                            <li><a href="./Embedding_Videos_and_Audio.html">Embedding Videos and Audio - Making Pages Multimedia</a></li>
+                            <li><a href="./Using_div_and_span.html">Using &lt;div&gt; and &lt;span&gt; - Grouping and Styling Elements</a></li>
+                            <li><a href="./How_I_Learned_to_Comment_My_Code_in_HTML.html">How I Learned to Comment My Code in HTML - Making Code Easy to Read and Maintain</a></li>
+                            <li><a href=".">HTML Meta Tags – Controlling How My Page Appears in Search Engines</a></li>
+                            <li><a href="./Creating_Navigation_Menus_with_HTML.html">Creating Navigation Menus with HTML - Making Site Easy to Explore</a></li>
+                            <li><a href="./HTML_Best_Practices_I’m_Following_as_a_Beginner.html">HTML Best Practices I’m Following as a Beginner - Simple Rules for Better Web Pages</a></li>
+                            <li><a href="./Building_My_First_Full_HTML_Page.html">Building My First Full HTML Page – What I Learned</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <form>
+                <div class="form-content">
+                    <h2>Newsletter</h2>
+                    <input type="text" placeholder="Enter your fullname">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">subscribe</button>
+                </div>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <div class="footer_links">
+                <div class="links_container">
+                    <h3>About switzCodes</h3>
+                    <p>Sharing my journey of learning HTML, CSS and JavaScript one day at a time.</p>
+                </div>
+                <div class="links_container">
+                    <h3>Quick Links</h3>
+                    <p><a href="../../index.html">Home</a></p>
+                    <p><a href="../../quickLinks/privacy_policy/privacy_policy.html">Privacy Policy</a></p>
+                    <p><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a></p>
+                    <p><a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                    </p>
+                    <p><a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a></p>
+                </div>
+                <div class="links_container">
+                    <h3>Follow me</h3>
+                    <p><a href="#">Twitter</a></p>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <p>&copy; 2025 switzCodes. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="../script/hamburgerToggle.js"></script>
+    <script src="../script/search_script.js"></script>
+</body>
+
+</html>

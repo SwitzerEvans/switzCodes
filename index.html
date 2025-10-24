@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Page Title -->
+    <title>Learn HTML, CSS & JavaScript | switzCodes</title>
+
+    <!-- ✅ Primary SEO -->
+    <meta name="description"
+        content="SwitzCodes is a personal blog by Chiemeka Evans, sharing his journey learning HTML, CSS, and JavaScript. Discover tutorials, guides, and coding tips for beginners.">
+    <meta name="keywords"
+        content="SwitzCodes, Chiemeka Evans, learn HTML, CSS tutorials, JavaScript for beginners, web development blog, coding tips, frontend development">
+    <meta name="author" content="Chiemeka Evans">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- ✅ Open Graph (for social media previews) -->
+    <meta property="og:title" content="Learn HTML, CSS & JavaScript | switzCodes">
+    <meta property="og:description"
+        content="Join Chiemeka Evans on his web development journey. Learn HTML, CSS, and JavaScript through beginner-friendly tutorials and examples.">
+    <meta property="og:image" content="https://switzerevans.github.io/switzCodes/assets/switzcodeslogo.png">
+    <meta property="og:url" content="https://switzerevans.github.io/switzCodes/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SwitzCodes">
+
+    <!-- ✅ Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Learn HTML, CSS & JavaScript | switzCodes">
+    <meta name="twitter:description"
+        content="Discover beginner tutorials and web development lessons on SwitzCodes by Chiemeka Evans. Learn HTML, CSS, and JavaScript step by step.">
+    <meta name="twitter:image" content="https://switzerevans.github.io/switzCodes/assets/switzcodeslogo.png">
+
+    <!-- ✅ Canonical URL -->
+    <link rel="canonical" href="https://switzerevans.github.io/switzCodes/">
+
+    <!-- ✅ Favicon & Styles -->
+    <link rel="icon" href="./assets/switzcodeslogo.png">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+
+<body>
+    <div class="body_container">
+
+        <!-- Hamburger menu -->
+        <div class="hamburger-menu">
+            <div class="hamburger-menu-link">
+                <span id="close-hamurger">X</span>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="./index.html">Home</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="./quickLinks/about/about.html">About</a>
+            </div>
+
+            <div id="hamburger-contact" class="hamburger-menu-link">
+                <a href="./quickLinks/contact/contact.html">Contact</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="./posts/EvansPosts-HTML/Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="./posts/EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="./posts/EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </div>
+        </div>
+
+        <!-- Header container -->
+
+        <header class="nav-search">
+            <div class="fore_container">
+                <h1>switz<span>Codes</span></h1>
+                <div class="head_link">
+                    <a href="./index.html">Home</a>
+                    <a href="./quickLinks/about/about.html">About</a>
+                    <a href="./quickLinks/contact/contact.html">Contact</a>
+                </div>
+
+                <!-- update -->
+
+                <div class="header-icons">
+                    <img src="./assets/search.png" class="search-icon">
+                    <div class="hamburg_icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+
+                <div class="head-icon">
+                    <input type="text" placeholder="search posts..." id="search-input-desktop"
+                        oninput="searchPostsDesktop()">
+                    <div class="search-desktop">
+                        <div id="search-result-desktop">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="search-input-mobile" class="search">
+                <!-- update2 -->
+                <span class="js-close-mobile-search">X</span>
+                <div class="search-container">
+                    <input type="text" placeholder="Search Posts..." id="search_input" oninput="searchPostsMobile()">
+                </div>
+                <div id="search-result">
+                </div>
+            </div>
+
+        </header>
+
+        <div class="button_container">
+            <nav>
+                <a href="./posts/EvansPosts-HTML/Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+                <a href="./posts/EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                <a href="./posts/EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </nav>
+        </div>
+
+
+        <main class="main_container">
+
+            <div class="mainposts_container">
+                <div class="card">
+                    <img src="./assets/HTML_bg.jfif" alt="HTMl structure">
+                    <div class="card_description">
+                        <h2>Getting Started With HTML</h2>
+                        <p class="date">June 2, 2025</p>
+                        <p>Learn how to structure web pages with HTML, the building block
+                            of the web.
+                        </p>
+
+                        <a
+                            href="./posts/EvansPosts-HTML/Introduction_to_HTML_My_First_Step_Into_Web_Development.html">ReadMore</a>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img src="./assets/CSS_bg.jfif" alt="CSS Design">
+                    <div class="card_description">
+                        <h2>Mastering CSS for Modern websites</h2>
+                        <p class="date"><!--July 25, 2025-->Pending...</p>
+                        <p>Enhance your website with beautiful designs and layout
+                            using CSS.
+                        </p>
+
+                        <a
+                            href="./posts/EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">ReadMore</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./assets/javascript_bg.jfif" alt="HTMl structure">
+                    <div class="card_description">
+                        <h2>JavaScript Basics for Beginners</h2>
+                        <p class="date"><!--August 30, 2025-->Pending...</p>
+                        <p>Learn how to make your website interactive with
+                            JavaScript fundamentals.
+                        </p>
+
+                        <a href="./posts/EvansPosts-JavaScript/Introduction_to_JavaScript.html">ReadMore</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer_links">
+                <div class="links_container">
+                    <h3>About switzCodes</h3>
+                    <p>Sharing my journey of learning HTML, CSS and JavaScript one day at a time.</p>
+                </div>
+                <div class="links_container">
+                    <h3>Quick Links</h3>
+                    <p><a href="./index.html">Home</a></p>
+                    <p><a href="./quickLinks/privacy_policy/privacy_policy.html">Privacy Policy</a></p>
+                    <p><a
+                            href="./posts/EvansPosts-HTML/Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+                    </p>
+                    <p><a
+                            href="./posts/EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                    </p>
+                    <p><a href="./posts/EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a></p>
+                </div>
+                <div class="links_container">
+                    <h3>Follow me</h3>
+                    <p><a href="#">Twitter</a></p>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <p>&copy; 2025 switzCodes. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="./script/hamburgerToggle.js"></script>
+    <script src="./script/search_script.js"></script>
+</body>
+
+</html>
