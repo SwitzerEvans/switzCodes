@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://switzcodes.com/</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/index.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/quickLinks/about/about.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/quickLinks/contact/contact.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/Introduction_to_HTML_My_First_Step_Into_Web_Development.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-JavaScript/Introduction_to_JavaScript.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/Understanding_the_HTML_Document_Structure.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/Headings_and_Paragraphs_Writing_Basic_Page_Content.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/HTML_Text_Formatting.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/Creating_Links_with_the_a_Tag.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/Adding_Images_with_img.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/Lists_in_HTML.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/Creating_Tables.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/HTML_Forms.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/Input_Types_and_Form_Elements.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/HTML_Attributes.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/HTML_Semantic_Tags.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/HTML_Entities.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/Embedding_Videos_and_Audio.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/Using_div_and_span.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/How_I_Learned_to_Comment_My_Code_in_HTML.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/HTML_Meta_Tags.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/Creating_Navigation_Menus_with_HTML.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/HTML_Best_Practices_I%E2%80%99m_Following_as_a_Beginner.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://switzcodes.com/posts/EvansPosts-HTML/Building_My_First_Full_HTML_Page.html</loc>
+  <lastmod>2025-10-31T22:17:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
