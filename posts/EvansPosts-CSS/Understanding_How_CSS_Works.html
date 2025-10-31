@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="../../assets/switzcodeslogo.png" type="image/png">
+
+    <!-- ✅ Stylesheet -->
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <div class="body_container">
+        <div class="hamburger-menu">
+            <div class="hamburger-menu-link">
+                <span id="close-hamurger">X</span>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../index.html">Home</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../quickLinks/about/about.html">About</a>
+            </div>
+
+            <div id="hamburger-contact" class="hamburger-menu-link">
+                <a href="../../quickLinks/contact/contact.html">Contact</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </div>
+        </div>
+
+        <header class="nav-search">
+            <div class="fore_container">
+                <h1>switz<span>Codes</span></h1>
+                <div class="head_link">
+                    <a href="../../index.html">Home</a>
+                    <a href="../../quickLinks/about/about.html">About</a>
+                    <a href="../../quickLinks/contact/contact.html">Contact</a>
+                </div>
+
+                <div class="header-icons">
+                    <img src="../../assets/search.png" class="search-icon">
+                    <div class="hamburg_icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="head-icon">
+                    <input type="text" placeholder="search posts..." id="search-input-desktop"
+                        oninput="searchPostsDesktop()">
+                    <div class="search-desktop">
+                        <div id="search-result-desktop"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="search-input-mobile" class="search">
+                <span class="js-close-mobile-search">X</span>
+                <div class="search-container">
+                    <input type="text" placeholder="Search Posts..." id="search_input" oninput="searchPostsMobile()">
+                </div>
+                <div id="search-result"></div>
+            </div>
+        </header>
+
+        <div class="button_container">
+            <nav>
+                <a href="../EvansPosts-HTML/Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </nav>
+        </div>
+
+        <main class="main_container">
+            <div class="mainposts_container" id="main-content">
+
+                <section class="postdiv_container">
+                    <!-- <img src="../../assets/#"
+                    alt="#"> -->
+                    <h1>🎨 Understanding How CSS Works – From Selectors to Properties</h1>
+                    <p class="date">📅 October 21, 2025</p>
+                    <p>✍️ By Evans</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <p>Hey, welcome back! 👋</p>
+                    <p>
+                        After my first CSS lesson, I could already change colors and fonts — but I didn’t really
+                        understand how CSS worked behind the scenes. Why did some rules override others? Why did certain
+                        styles apply while others didn’t? 🤔
+                    </p>
+                    <p>
+                        So I decided to go deeper — to learn how CSS truly works, from <em>selectors</em> that target
+                        elements to
+                        <em>properties</em> that control every tiny piece of design. This post is all about that "aha!"
+                        moment
+                        where everything started making sense. 💡
+                    </p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧩 What CSS Actually Does</h3>
+                    <p>
+                        CSS is short for Cascading Style Sheets, and its job is to tell the browser how to display HTML
+                        elements.
+                    </p>
+                    <p>
+                        When a browser loads a webpage, it:
+                    </p>
+                    <ol>
+                        <li>Reads the HTML (the content and structure).</li>
+                        <li>Loads the CSS (the design rules).</li>
+                        <li>Combines them together to create what you see.</li>
+                    </ol>
+                    <p>So HTML says <strong>“what’s on the page”</strong>, and CSS says <strong>“how it should
+                            look.”</strong></p>
+                    <p>For example:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;p&gt;Hello, world!&lt;/p&gt;
+                        </code></pre>
+                    </div>
+
+                    <p>Without CSS — plain text.</p>
+                    <p>Add this CSS:</p>
+                    <div class="code_container">
+                        <pre><code>
+p {
+  color: purple;
+  font-size: 20px;
+}
+                        </code></pre>
+                    </div>
+                    <p>Boom! ✨ The browser paints your “Hello, world!” in purple, larger, and cleaner.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🎯 Selectors – Targeting the Right Elements</h3>
+                    <p>Selectors are like arrows pointing at the parts of your webpage you want to style.</p>
+                    <p>Here are some I’ve learned:</p>
+                    <ul>
+                        <li>
+                            <strong>Element Selector</strong> → targets all of that tag
+                            <div class="code_container">
+                                <pre><code>
+p { color: blue; }
+                            </code></pre>
+                            </div>
+                        </li>
+
+                        <li>
+                            <strong>Class Selector</strong> → targets any element with a class name (you use . before
+                            the name)
+                            <div class="code_container">
+                                <pre><code>
+.highlight { background-color: yellow; }
+                            </code></pre>
+                            </div>
+                            <p>HTML example:</p>
+                            <div class="code_container">
+                                <pre><code>
+&lt;p class="highlight"&gt;This text has a yellow background!&lt;/p&gt;
+                            </code></pre>
+                            </div>
+                        </li>
+
+                        <li>
+                            <strong>ID Selector</strong> → targets one unique element (you use # before the name)
+                            <div class="code_container">
+                                <pre><code>
+#main-title { color: darkred; }
+                            </code></pre>
+                            </div>
+
+                            <p>HTML example</p>
+                            <div class="code_container">
+                                <pre><code>
+&lt;h1 id="main-title"&gt;Welcome to My Page&lt;/h1&gt;
+                                </code></pre>
+                            </div>
+                        </li>
+
+                        <li>
+                            <strong>Universal Selector</strong> → applies to everything
+                            <div class="code_container">
+                                <pre><code>
+* { margin: 0; padding: 0; }
+                            </code></pre>
+                            </div>
+                        </li>
+
+                        <li>
+                            <strong>Grouping Selector</strong> → style multiple tags at once
+                            <div class="code_container">
+                                <pre><code>
+h1, h2, h3 { color: navy; }
+                            </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                    <p>At first, I mixed them up 😅 — I used a class selector with a # or forgot the dot. But after some
+                        practice, I started to see how flexible selectors make CSS.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>⚙️ Properties and Values – The Building Blocks of Style</h3>
+                    <p>Once you’ve selected an element, you use properties to define what you want to change — and
+                        values to tell the browser how.</p>
+                    <p>Example :</p>
+
+                    <div class="code_container">
+                        <pre><code>
+p {
+  color: green;     <span id="comment">/* property: color, value: green */</span>
+  font-size: 18px;   <span id="comment">/* property: font-size, value: 18px */</span>
+}
+                        </code></pre>
+                    </div>
+                    <p>Each declaration ends with a semicolon ;, and all of them are wrapped in curly braces { }.</p>
+                    <p>It’s like giving the browser a list of instructions for that element.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧱 How the Browser Reads CSS – The Cascade</h3>
+                    <p>The word cascading means that when two or more rules target the same element, CSS decides which
+                        one wins based on specificity and order.</p>
+                    <p>Here’s what I learned about that:</p>
+                    <ol>
+                        <li>Inline styles (inside the HTML element) are strongest.</li>
+                        <li>IDs are stronger than classes.</li>
+                        <li>Classes are stronger than elements.</li>
+                        <li>If two rules have the same strength, the one that comes last wins.</li>
+                    </ol>
+                    <p>Example:</p>
+                    <div class="code_container">
+                        <pre><code>
+p { color: blue; }
+p { color: red; }
+                        </code></pre>
+                    </div>
+                    <p>The text will be red, because that rule comes last.</p>
+                    <p>And if you do this:</p>
+                    <div class="code_container">
+                        <pre><code>
+#intro { color: green; }
+p { color: red; }
+                        </code></pre>
+                    </div>
+                    &lt;p&gt;Any &lt;p id="intro"&gt; will be green, because IDs override element selectors.</p>
+                    <p>Once I understood this order, everything started to click! 🧠</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧪 Experiment I Tried</h3>
+                    <p>
+                        I created this small example to test everything I learned:
+                    </p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    p { color: gray; }
+    .special { color: blue; }
+    #unique { color: red; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Hello world!&lt;/p&gt;
+  &lt;p class="special"&gt;I’m styled with a class!&lt;/p&gt;
+  &lt;p id="unique"&gt;I have a unique ID style!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                    </div>
+                    <p>When I opened it, I could clearly see:</p>
+                    <ul>
+                        <li>The first line was gray</li>
+                        <li>The second was blue</li>
+                        <li>The last one was red</li>
+                    </ul>
+                    <p>That experiment helped me finally see how selectors, properties, and the cascade worked together.
+                    </p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>⚠️ Mistakes I Made at First</h3>
+                    <ul>
+                        <li>❌ Forgot the semicolon ; after a property.</li>
+                        <li>❌ Missed curly braces {} and broke the whole rule.</li>
+                        <li>❌ Used color:red without a space (which still works but looks messy).</li>
+                        <li>❌ Tried to style something but used the wrong selector (like .button instead of #button).
+                        </li>
+                    </ul>
+                    <p>Now I always double-check my punctuation and indentation — clean CSS saves time later!</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>💬 Pro Tip I Learned</h3>
+                    <p>Use developer tools in your browser (right-click → “Inspect”) to test CSS live. You can see
+                        exactly which rule is applied to an element, what’s being overridden, and even change colors on
+                        the fly. 🔍</p>
+
+                        <p>It’s one of the best ways to learn by doing.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🎨 How I See CSS Now</h3>
+                    <p>CSS started to make sense once I understood that it’s like a set of layers:</p>
+                    <ul>
+                        <li>HTML provides the content.</li>
+                        <li>CSS paints the style over it.</li>
+                        <li>The browser applies the rules based on priority.</li>
+                    </ul>
+                    <p>It’s both logic and art — and that’s what I love about it.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🎯 Final Thoughts</h3>
+                    <p>
+                        Learning how CSS works — from selectors to properties — gave me real control over my designs. 
+                        I no longer feel like I’m guessing or copying random snippets online. I know why something looks the way it does.
+                    </p>
+                    <p>Next up, I’ll explore different ways to add CSS to a webpage — inline, internal, and external — and when to use each.</p>
+                    <p>
+                        Stay tuned, and happy coding!😊
+                    </p>
+                    <p>— Evans 💻</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <div class="navigate_container">
+                        <a href="./Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">← Previous Post</a>
+                        <a href="./Ways_to_Add_CSS.html">Next Post →</a>
+                    </div>
+                </section>
+
+
+            </div>
+
+            <div class="mainposts_container">
+                <div class="postdiv_container">
+                    <div class="posts_header">
+                        <h3>Posts</h3>
+                    </div>
+                    <div class="overflow_posts">
+                        <ol>
+                            <li><a href="./Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">Introduction
+                                    to CSS – My First Step Into Styling Web Pages</a></li>
+                            <li><a href="./Understanding_How_CSS_Works.html">Understanding How CSS Works – From
+                                    Selectors to Properties</a></li>
+                            <li><a href="./Ways_to_Add_CSS.html">Ways to Add CSS – Inline, Internal, and External
+                                    Stylesheets</a></li>
+                            <li><a href="./CSS_Selectors.html">CSS Selectors – Targeting the Right Elements</a></li>
+                            <li><a href="./Colors_in_CSS.html">Colors in CSS – From Names to Hex, RGB, and HSL</a></li>
+                            <li><a href="./Styling_Text.html">Styling Text – Fonts, Sizes, and Line Spacing</a></li>
+                            <li><a href="./CSS_Box_Model.html">CSS Box Model – Margin, Border, Padding, and Content</a>
+                            </li>
+                            <li><a href="./Backgrounds_in_CSS.html">Backgrounds in CSS – Colors, Gradients, and
+                                    Images</a></li>
+                            <li><a href="./Styling_Links.html">Styling Links – Changing Colors, Hover Effects, and
+                                    More</a></li>
+                            <li><a href="./Working_with_Lists_in_CSS.html">Working with Lists in CSS – Bullets, Numbers,
+                                    and Custom Styles</a></li>
+                            <li><a href="./Styling_Tables.html">Styling Tables – Making Data Look Good</a></li>
+                            <li><a href="./CSS_Display_and_Visibility.html">CSS Display and Visibility – Block, Inline,
+                                    Inline-Block, and None</a></li>
+                            <li><a href="./Positioning_in_CSS.html">Positioning in CSS – Static, Relative, Absolute, and
+                                    Fixed</a></li>
+                            <li><a href="./Flexbox.html">Flexbox – How I Learned to Arrange Elements Easily</a></li>
+                            <li><a href="./CSS_Grid.html">CSS Grid – Creating Complex Layouts with Ease</a></li>
+                            <li><a href="./Styling_Forms.html">Styling Forms – Inputs, Buttons, and Select Fields</a>
+                            </li>
+                            <li><a href="./CSS_Pseudo_classes_and_Pseudo_elements.html">CSS Pseudo-classes and
+                                    Pseudo-elements – Adding Extra Style Without Extra HTML</a></li>
+                            <li><a href="./CSS_Transitions.html">CSS Transitions – Making Smooth Hover and Click
+                                    Effects</a></li>
+                            <li><a href="./CSS_Animations.html">CSS Animations – Bringing Elements to Life</a></li>
+                            <li><a href="./Responsive_Design.html">Responsive Design – Making My Pages Look Good on Any
+                                    Device</a></li>
+                            <li><a href="./CSS_Media_Queries.html">CSS Media Queries – Styling Based on Screen Size</a>
+                            </li>
+                            <li><a href="./CSS_Variables.html">CSS Variables – Reusing Styles Like a Pro</a></li>
+                            <li><a href="./CSS_Best_Practices_I’m_Following_as_a_Beginner.html">CSS Best Practices I’m
+                                    Following as a Beginner</a></li>
+                            <li><a href="./Building_My_First_Full_CSS_Styled_Web_Page.html">Building My First Full
+                                    CSS-Styled Web Page – What I Learned</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- form container -->
+
+
+
+
+            <div id="mlb2-31121348" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-31121348">
+                <div class="ml-form-align-center ">
+                    <div class="ml-form-embedWrapper embedForm">
+
+
+
+
+                        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+
+                            <div class="ml-form-embedContent" style=" ">
+
+                                <h4>Subscribe to switzcodes</h4>
+                                Get updates on HTML, CSS & JavaScript tutorials
+
+                            </div>
+
+                            <form class="ml-block-form"
+                                action="https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/subscribe"
+                                data-code="" method="post" target="_blank">
+                                <div class="ml-form-formContent">
+
+
+
+                                    <div class="ml-form-fieldRow ">
+                                        <div class="ml-field-group ml-field-name">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="name" type="text" class="form-control" data-inputmask=""
+                                                name="fields[name]" placeholder="Enter your fullname"
+                                                autocomplete="given-name">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="ml-form-fieldRow ml-last-item">
+                                        <div
+                                            class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="email" aria-required="true" type="email"
+                                                class="form-control" data-inputmask="" name="fields[email]"
+                                                placeholder="Enter your email" autocomplete="email">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Privacy policy -->
+
+                                <!-- /Privacy policy -->
+
+
+                                <input type="hidden" name="ml-submit" value="1">
+
+                                <div class="ml-form-embedSubmit">
+
+                                    <button type="submit" class="primary">Subscribe</button>
+
+                                    <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                        <div class="ml-form-embedSubmitLoad"></div>
+                                        <span class="sr-only">Loading...</span>
+                                    </button>
+                                </div>
+
+
+                                <input type="hidden" name="anticsrf" value="true">
+                            </form>
+                        </div>
+
+                        <div class="ml-form-successBody row-success" style="display: none">
+
+                            <div class="ml-form-successContent">
+
+                                <h4>Thank you!</h4>
+
+                                <p>You have successfully joined our subscriber list.</p>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer_links">
+                <div class="links_container">
+                    <h3>About switzCodes</h3>
+                    <p>Sharing my journey of learning HTML, CSS and JavaScript one day at a time.</p>
+                </div>
+                <div class="links_container">
+                    <h3>Quick Links</h3>
+                    <p><a href="../../index.html">Home</a></p>
+                    <p><a href="../../quickLinks/privacy_policy/privacy_policy.html">Privacy Policy</a></p>
+                    <p><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a></p>
+                    <p><a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                    </p>
+                    <p><a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a></p>
+                </div>
+                <div class="links_container">
+                    <h3>Follow me</h3>
+                    <p><a href="#">Twitter</a></p>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <p>&copy; 2025 switzCodes. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="../script/hamburgerToggle.js" defer></script>
+    <script src="../script/search_script.js" defer></script>
+
+    <!-- from mailerLite -->
+
+    <script>
+        function ml_webform_success_31121348() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-31121348 .row-success').show();
+            $('.ml-subscribe-form-31121348 .row-form').hide();
+        }
+    </script>
+
+
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/takel")
+    </script>
+</body>
+
+</html>

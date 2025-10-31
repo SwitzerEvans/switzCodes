@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="../../assets/switzcodeslogo.png" type="image/png">
+
+    <!-- ✅ Stylesheet -->
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <div class="body_container">
+        <div class="hamburger-menu">
+            <div class="hamburger-menu-link">
+                <span id="close-hamurger">X</span>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../index.html">Home</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../quickLinks/about/about.html">About</a>
+            </div>
+
+            <div id="hamburger-contact" class="hamburger-menu-link">
+                <a href="../../quickLinks/contact/contact.html">Contact</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </div>
+        </div>
+
+        <header class="nav-search">
+            <div class="fore_container">
+                <h1>switz<span>Codes</span></h1>
+                <div class="head_link">
+                    <a href="../../index.html">Home</a>
+                    <a href="../../quickLinks/about/about.html">About</a>
+                    <a href="../../quickLinks/contact/contact.html">Contact</a>
+                </div>
+
+                <div class="header-icons">
+                    <img src="../../assets/search.png" class="search-icon">
+                    <div class="hamburg_icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="head-icon">
+                    <input type="text" placeholder="search posts..." id="search-input-desktop"
+                        oninput="searchPostsDesktop()">
+                    <div class="search-desktop">
+                        <div id="search-result-desktop"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="search-input-mobile" class="search">
+                <span class="js-close-mobile-search">X</span>
+                <div class="search-container">
+                    <input type="text" placeholder="Search Posts..." id="search_input" oninput="searchPostsMobile()">
+                </div>
+                <div id="search-result"></div>
+            </div>
+        </header>
+
+        <div class="button_container">
+            <nav>
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </nav>
+        </div>
+
+        <main class="main_container">
+            <div class="mainposts_container" id="main-content">
+
+                <section class="postdiv_container">
+                    <img src="../../assets/HTML_Semantic_Tags.webp" 
+     alt="Banner image for a switzCodes blog post titled ‘HTML Semantic Tags – Writing Clean and Meaningful Code,’ featuring the switzCodes logo in dark blue, white, and green with structured code visuals.">
+                    <h1>📄 HTML Semantic Tags – Writing Clean and Meaningful Code</h1>
+                    <p class="date">📅 September 27, 2025</p>
+                    <p>✍️ By Evans</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <p>Hey there, friends! 👋</p>
+                    <p>
+                        As I got more comfortable writing HTML, I noticed something: not all tags are just about how
+                        things look — some are about what they mean.
+                    </p>
+                    <p>
+                        That’s when I discovered semantic tags, and honestly, they changed how I see HTML completely. 😄
+                    </p>
+                    <p>Let’s dive into what they are and why they matter.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧠 What Are Semantic Tags?</h3>
+                    <p>
+                        Semantic tags are HTML elements that describe their purpose — both to the browser and to
+                        developers reading your code.
+                    </p>
+
+                    <p>Instead of using &lt;div&gt; for everything, semantic tags like &lt;header&gt;, &lt;nav&gt;,
+                        &lt;article&gt;, and &lt;footer&gt;
+                        explain what each part of your page is meant for.
+                    </p>
+
+                    <p>Think of it like giving your HTML structure a meaningful name instead of just “box1” and
+                        “box2.”😅</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧩 Example of a Non-Semantic vs. Semantic Layout</h3>
+                    <p>Before semantic tags, people used tons of
+                    <p> elements like this:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;div id="header"&gt;&lt;/div&gt;
+&lt;div id="nav"&gt;&lt;/div&gt;
+&lt;div id="main"&gt;&lt;/div&gt;
+&lt;div id="footer"&gt;&lt;/div&gt;
+                       </code></pre>
+                    </div>
+                    <p>It works, but it doesn’t tell you much.</p>
+                    <p>Now with semantic HTML, you can write this:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;header&gt;&lt;/header&gt;
+&lt;nav&gt;&lt;/nav&gt;
+&lt;main&gt;&lt;/main&gt;
+&lt;footer&gt;&lt;/footer&gt;
+                        </code></pre>
+                    </div>
+                    <p>Much clearer, right? You can read the structure and instantly understand what’s going on.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧱 Common Semantic Tags I Learned</h3>
+                    <p>Here are some I now use in almost every HTML page 👇</p>
+                    <h4>🧭 &lt;header&gt;</h4>
+                    <p>Used for the top section of a page or a section — usually contains the logo, title, or
+                        navigation.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;header&gt;
+  &lt;h1&gt;Welcome to SwitzCodes&lt;/h1&gt;
+&lt;/header&gt;
+                        </code></pre>
+                    </div>
+                    <h4>🗺️ &lt;nav&gt;</h4>
+                    <p>Contains your website’s navigation links.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;nav&gt;
+  &lt;a href="index.html"&gt;Home&lt;/a&gt;
+  &lt;a href="about.html"&gt;About&lt;/a&gt;
+  &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+&lt;/nav>
+                        </code></pre>
+                    </div>
+
+                    <h4>📄 &lt;main&gt;</h4>
+                    <p>Holds the main content of the page — the part unique to that page.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;main&gt;
+  &lt;h2>My Blog Post&lt;/h2&gt;
+  &lt;p>Learning HTML is fun!&lt;/p&gt;
+&lt;/main&gt;
+                        </code></pre>
+                    </div>
+
+                    <h4>📰 &lt;article&gt;</h4>
+                    <p>Used for independent content like blog posts, news stories, or tutorials.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;article&gt;
+  &lt;h2&gt;Understanding HTML&lt;/h2&gt;
+  &lt;p&gt;This is one of my first lessons in web development.&lt;/p&gt;
+&lt;/article&gt;
+                        </code></pre>
+                    </div>
+
+                    <h4>🧱 &lt;section&gt;</h4>
+                    <p>Groups related content within a page.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;section&gt;
+  &lt;h3&gt;About Me&lt;/h3&gt;
+  &lt;p>I’m Evans, a web development learner sharing my journey on SwitzCodes.&lt;/p&gt;
+&lt;/section&gt;
+                        </code></pre>
+                    </div>
+
+                    <h4>💬 &lt;aside&gt;</h4>
+                    <p>Used for sidebars, ads, or extra info not part of the main content.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;aside&gt;
+  &lt;h4&gt;Tip 💡&lt;/h4&gt;
+  &lt;p&gt;Use semantic tags for better SEO and accessibility!&lt;/p&gt;
+&lt;/aside&gt;
+                        </code></pre>
+                    </div>
+                    <h4>⚙️ &lt;footer&gt;</h4>
+                    <p>Used for the bottom section of a page — like copyright info or links.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;footer&gt;
+  &lt;p&gt;© 2025 SwitzCodes. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>💡 Why Semantic Tags Matter</h3>
+                    <p>Once I started using semantic tags, my code looked cleaner, and browsers (and Google!) understood
+                        it better.</p>
+                    <p>Here’s why they’re important:</p>
+                    <ul>
+                        <li>Better readability – anyone can understand your HTML structure.</li>
+                        <li>SEO-friendly – search engines know which parts of your site matter most.</li>
+                        <li>Accessibility – screen readers can navigate your page easily.</li>
+                        <li>Professional structure – your site looks more organized in every sense.</li>
+                    </ul>
+                </section>
+                <section class="postdiv_container">
+                    <h3>🧠 A Quick Practice Example</h3>
+                    <p>Here’s a small structure I built to test my understanding:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Semantic Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;switzCodes&lt;/h1&gt;
+      &lt;nav>
+        &lt;a href="#"&gt;Home&lt;/a&gt;
+        &lt;a href="#"&gt;Blog&lt;/a&gt;
+        &lt;a href="#"&gt;Contact&lt;/a&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+      &lt;article&gt;
+        &lt;h2&gt;My HTML Journey&lt;/h2&gt;
+        &lt;p&gt;This is where I share what I’ve been learning in web development.&lt;/p&gt;
+      &lt;/article&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+      &lt;p&gt;© 2025 SwitzCodes&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
+                    <p>Simple, clean, and meaningful. That’s what semantic HTML is all about. 🌟</p>
+                </section>
+                <section class="postdiv_container">
+                    <h3>🎯 What I Learned</h3>
+                    <p>Using semantic tags made me realize that good HTML isn’t just about making things work — it’s
+                        about making them <em>understandable</em>.</p>
+                    <p>Now when I look at my code, I don’t just see tags… I see structure, meaning, and purpose. 🙌</p>
+                </section>
+                <secrion class="postdiv_container">
+                    <h3>👉 What’s Next?</h3>
+                    <p>Next, I’ll be exploring HTML Entities – Displaying Special Characters, where I’ll learn how to
+                        show symbols like &lt;, &gt;, and &copy; without breaking the page.</p>
+                    <p>Stay tuned and keep coding! 💻</p>
+                    <p>— Evans 💻</p>
+                </secrion>
+
+                <section class="postdiv_container">
+                    <div class="navigate_container">
+
+                        <!-- corect under prev-->
+                        <a href="./HTML_Attributes.html">← Previous Post</a>
+                        <a href="./HTML_Entities.html">Next Post →</a>
+                    </div>
+                </section>
+
+
+            </div>
+
+            <div class="mainposts_container">
+                <div class="postdiv_container">
+                    <div class="posts_header">
+                        <h3>Posts</h3>
+                    </div>
+                    <div class="overflow_posts">
+                       <ol>
+                            <li><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">Introduction to
+                                    HTML - My First Step Into Web Development</a></li>
+                            <li><a href="./Understanding_the_HTML_Document_Structure.html">Understanding the HTML
+                                    Document Structure - Building the Foundation of Every Web Page</a></li>
+                            <li><a href="./Headings_and_Paragraphs_Writing_Basic_Page_Content.html">Headings and Paragraphs - Writing Basic Page Content</a></li>
+                            <li><a href="./HTML_Text_Formatting.html">HTML Text Formatting - Bold, Italic, Underline and More</a></li>
+                            <li><a href="./Creating_Links_with_the_a_Tag.html">Creating Links with the &lt;a&gt; Tag - Linking Web Pages</a></li>
+                            <li><a href="./Adding_Images_with_img.html">Adding Images with &lt;img&gt; - Making Web Pages Visual</a></li>
+                            <li><a href="./Lists_in_HTML.html">Lists in HTML - Ordered and Unordered Lists</a></li>
+                            <li><a href="./Creating_Tables.html">Creating Tables - Organizing Data in HTML</a></li>
+                            <li><a href="./HTML_Forms.html">HTML Forms - How I Learned to Collect User Input</a></li>
+                            <li><a href="./Input_Types_and_Form_Elements.html">Input Types and Form Elements - Text, Radio, Checkbox, Button</a></li>
+                            <li><a href="./HTML_Attributes.html">HTML Attributes - What Makes Tags More Powerful</a></li>
+                            <li><a href="./HTML_Semantic_Tags.html">HTML Semantic Tags - Writing Clean and Meaningful Code</a></li>
+                            <li><a href="./HTML_Entities.html">HTML Entities - Displaying Special Characters</a></li>
+                            <li><a href="./Embedding_Videos_and_Audio.html">Embedding Videos and Audio - Making Pages Multimedia</a></li>
+                            <li><a href="./Using_div_and_span.html">Using &lt;div&gt; and &lt;span&gt; - Grouping and Styling Elements</a></li>
+                            <li><a href="./How_I_Learned_to_Comment_My_Code_in_HTML.html">How I Learned to Comment My Code in HTML - Making Code Easy to Read and Maintain</a></li>
+                            <li><a href="./HTML_Meta_Tags.html">HTML Meta Tags – Controlling How My Page Appears in Search Engines</a></li>
+                            <li><a href="./Creating_Navigation_Menus_with_HTML.html">Creating Navigation Menus with HTML - Making Site Easy to Explore</a></li>
+                            <li><a href="./HTML_Best_Practices_I’m_Following_as_a_Beginner.html">HTML Best Practices I’m Following as a Beginner - Simple Rules for Better Web Pages</a></li>
+                            <li><a href="./Building_My_First_Full_HTML_Page.html">Building My First Full HTML Page – What I Learned</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+            <!-- form container -->
+
+
+
+
+            <div id="mlb2-31121348" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-31121348">
+                <div class="ml-form-align-center ">
+                    <div class="ml-form-embedWrapper embedForm">
+
+
+
+
+                        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+
+                            <div class="ml-form-embedContent" style=" ">
+
+                                <h4>Subscribe to switzcodes</h4>
+                                Get updates on HTML, CSS & JavaScript tutorials
+
+                            </div>
+
+                            <form class="ml-block-form"
+                                action="https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/subscribe"
+                                data-code="" method="post" target="_blank">
+                                <div class="ml-form-formContent">
+
+
+
+                                    <div class="ml-form-fieldRow ">
+                                        <div class="ml-field-group ml-field-name">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="name" type="text" class="form-control" data-inputmask=""
+                                                name="fields[name]" placeholder="Enter your fullname"
+                                                autocomplete="given-name">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="ml-form-fieldRow ml-last-item">
+                                        <div
+                                            class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="email" aria-required="true" type="email"
+                                                class="form-control" data-inputmask="" name="fields[email]"
+                                                placeholder="Enter your email" autocomplete="email">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Privacy policy -->
+
+                                <!-- /Privacy policy -->
+
+
+                                <input type="hidden" name="ml-submit" value="1">
+
+                                <div class="ml-form-embedSubmit">
+
+                                    <button type="submit" class="primary">Subscribe</button>
+
+                                    <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                        <div class="ml-form-embedSubmitLoad"></div>
+                                        <span class="sr-only">Loading...</span>
+                                    </button>
+                                </div>
+
+
+                                <input type="hidden" name="anticsrf" value="true">
+                            </form>
+                        </div>
+
+                        <div class="ml-form-successBody row-success" style="display: none">
+
+                            <div class="ml-form-successContent">
+
+                                <h4>Thank you!</h4>
+
+                                <p>You have successfully joined our subscriber list.</p>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer_links">
+                <div class="links_container">
+                    <h3>About switzCodes</h3>
+                    <p>Sharing my journey of learning HTML, CSS and JavaScript one day at a time.</p>
+                </div>
+                <div class="links_container">
+                    <h3>Quick Links</h3>
+                    <p><a href="../../index.html">Home</a></p>
+                    <p><a href="../../quickLinks/privacy_policy/privacy_policy.html">Privacy Policy</a></p>
+                    <p><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a></p>
+                    <p><a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                    </p>
+                    <p><a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a></p>
+                </div>
+                <div class="links_container">
+                    <h3>Follow me</h3>
+                    <p><a href="#">Twitter</a></p>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <p>&copy; 2025 switzCodes. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="../script/hamburgerToggle.js" defer></script>
+    <script src="../script/search_script.js" defer></script>
+    <!-- from mailerLite -->
+
+    <script>
+        function ml_webform_success_31121348() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-31121348 .row-success').show();
+            $('.ml-subscribe-form-31121348 .row-form').hide();
+        }
+    </script>
+
+
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/takel")
+    </script>
+</body>
+
+</html>

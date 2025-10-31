@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="../../assets/switzcodeslogo.png" type="image/png">
+
+    <!-- ✅ Stylesheet -->
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <div class="body_container">
+        <div class="hamburger-menu">
+            <div class="hamburger-menu-link">
+                <span id="close-hamurger">X</span>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../index.html">Home</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../quickLinks/about/about.html">About</a>
+            </div>
+
+            <div id="hamburger-contact" class="hamburger-menu-link">
+                <a href="../../quickLinks/contact/contact.html">Contact</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </div>
+        </div>
+
+        <header class="nav-search">
+            <div class="fore_container">
+                <h1>switz<span>Codes</span></h1>
+                <div class="head_link">
+                    <a href="../../index.html">Home</a>
+                    <a href="../../quickLinks/about/about.html">About</a>
+                    <a href="../../quickLinks/contact/contact.html">Contact</a>
+                </div>
+
+                <div class="header-icons">
+                    <img src="../../assets/search.png" class="search-icon">
+                    <div class="hamburg_icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="head-icon">
+                    <input type="text" placeholder="search posts..." id="search-input-desktop"
+                        oninput="searchPostsDesktop()">
+                    <div class="search-desktop">
+                        <div id="search-result-desktop"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="search-input-mobile" class="search">
+                <span class="js-close-mobile-search">X</span>
+                <div class="search-container">
+                    <input type="text" placeholder="Search Posts..." id="search_input" oninput="searchPostsMobile()">
+                </div>
+                <div id="search-result"></div>
+            </div>
+        </header>
+
+        <div class="button_container">
+            <nav>
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </nav>
+        </div>
+
+        <main class="main_container">
+            <div class="mainposts_container" id="main-content">
+
+                <section class="postdiv_container">
+                    <img src="../../assets/Creating_Navigation_Menus_with_HTML.webp" 
+     alt="Banner image for a switzCodes blog post titled ‘Creating Navigation Menus with HTML – Making Site Easy to Explore,’ featuring the switzCodes logo in dark blue, white, and green with navigation visuals.">
+                    <h1>📄 Creating Navigation Menus with HTML - Making Site Easy to Explore</h1>
+                    <p class="date">📅 October 10, 2025</p>
+                    <p>✍️ By Evans</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <p>Hey! 👋</p>
+                    <p>
+                        When I started creating multiple pages on my site, I quickly realized I needed an easy way for
+                        visitors (and me 😅) to move between them.
+                        That’s when I learned about HTML navigation menus — the &lt;nav&gt; tag and links working
+                        together to make your site flow smoothly.
+                    </p>
+                    <p>Let me show you what I learned! 🚀</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧱 The &lt;nav&gt; Tag – The Navigation Area</h3>
+                    <p>
+                        The &lt;nav&gt; tag tells browsers, search engines, and screen readers that this section
+                        contains main navigation links.
+                    </p>
+                    <p>
+                        Here’s a simple example:
+                    </p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;nav&gt;
+  &lt;a href="index.html">Home&lt;/a&gt;
+  &lt;a href="about.html">About&lt;/a&gt;
+  &lt;a href="blog.html">Blog&lt;/a&gt;
+  &lt;a href="contact.html">Contact&lt;/a&gt;
+&lt;/nav&gt;
+                        </code></pre>
+                    </div>
+                    <p>That’s the basic idea — just a set of links inside the &lt;nav&gt; tag!</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🎨 Adding Some Style</h3>
+
+                    <p>When I first added links like that, they stacked on top of each other.</p>
+                    <p>To make them look like a menu bar, I used a bit of CSS.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;nav style="background-color: #333; padding: 10px;"&gt;
+  &lt;a href="index.html" style="color: white; margin: 10px; text-decoration: none;"&gt;Home&lt;/a&gt;
+  &lt;a href="about.html" style="color: white; margin: 10px; text-decoration: none;"&gt;About&lt;/a&gt;
+  &lt;a href="blog.html" style="color: white; margin: 10px; text-decoration: none;"&gt;Blog&lt;/a&gt;
+  &lt;a href="contact.html" style="color: white; margin: 10px; text-decoration: none;"&gt;Contact&lt;/a&gt;
+&lt;/nav>
+                        </code></pre>
+                    </div>
+                    <p>Now it looks like a real menu — simple, clean, and functional! 😎</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧱 Making It Look Even Better</h3>
+                    <p>
+                        You can use lists (&lt;ul&gt; and &lt;li&gt;) inside the nav to structure your menu better.
+                        That’s what most professional sites do.
+                    </p>
+                    <p>Example:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="blog.html"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+                        </code></pre>
+                    </div>
+                    <p>With CSS, you can turn that into a horizontal navbar:</p>
+                    <div class="code_container">
+                        <pre><code>
+nav ul {
+  list-style-type: none;
+  background-color: #333;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+                            </code></pre>
+                    </div>
+                    <p>Result: a smooth, professional-looking navigation bar that reacts when you hover over it ✨</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>💡 Things I Learned</h3>
+                    <ul>
+                        <li>Use <nav> only for main navigation areas — not for every set of links.</li>
+                        <li>Always make your navigation clear and simple.</li>
+                        <li>Test your links! A broken link can ruin the whole experience. 😅</li>
+                    </ul>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🎯 What I Learned</h3>
+                    <p>
+                        Building navigation menus taught me how structure and style come together in HTML and CSS.
+                        It’s satisfying to see a menu bar appear and actually work!
+                    </p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>👉 What’s Next?</h3>
+                    <p>
+                        Next up, I’ll share HTML Best Practices I’m Following as a Beginner — all the small habits I’ve picked up that make my code cleaner and easier to manage. 💡
+                    </p>
+                    <p>Catch you in the next one!</p>
+                    <p>— Evans 💻</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <div class="navigate_container">
+                        <a href="./HTML_Meta_Tags.html">← Previous Post</a>
+                        <a href="./HTML_Best_Practices_I’m_Following_as_a_Beginner.html">Next Post →</a>
+                    </div>
+                </section>
+
+
+            </div>
+
+            <div class="mainposts_container">
+                <div class="postdiv_container">
+                    <div class="posts_header">
+                        <h3>Posts</h3>
+                    </div>
+                    <div class="overflow_posts">
+                       <ol>
+                            <li><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">Introduction to
+                                    HTML - My First Step Into Web Development</a></li>
+                            <li><a href="./Understanding_the_HTML_Document_Structure.html">Understanding the HTML
+                                    Document Structure - Building the Foundation of Every Web Page</a></li>
+                            <li><a href="./Headings_and_Paragraphs_Writing_Basic_Page_Content.html">Headings and Paragraphs - Writing Basic Page Content</a></li>
+                            <li><a href="./HTML_Text_Formatting.html">HTML Text Formatting - Bold, Italic, Underline and More</a></li>
+                            <li><a href="./Creating_Links_with_the_a_Tag.html">Creating Links with the &lt;a&gt; Tag - Linking Web Pages</a></li>
+                            <li><a href="./Adding_Images_with_img.html">Adding Images with &lt;img&gt; - Making Web Pages Visual</a></li>
+                            <li><a href="./Lists_in_HTML.html">Lists in HTML - Ordered and Unordered Lists</a></li>
+                            <li><a href="./Creating_Tables.html">Creating Tables - Organizing Data in HTML</a></li>
+                            <li><a href="./HTML_Forms.html">HTML Forms - How I Learned to Collect User Input</a></li>
+                            <li><a href="./Input_Types_and_Form_Elements.html">Input Types and Form Elements - Text, Radio, Checkbox, Button</a></li>
+                            <li><a href="./HTML_Attributes.html">HTML Attributes - What Makes Tags More Powerful</a></li>
+                            <li><a href="./HTML_Semantic_Tags.html">HTML Semantic Tags - Writing Clean and Meaningful Code</a></li>
+                            <li><a href="./HTML_Entities.html">HTML Entities - Displaying Special Characters</a></li>
+                            <li><a href="./Embedding_Videos_and_Audio.html">Embedding Videos and Audio - Making Pages Multimedia</a></li>
+                            <li><a href="./Using_div_and_span.html">Using &lt;div&gt; and &lt;span&gt; - Grouping and Styling Elements</a></li>
+                            <li><a href="./How_I_Learned_to_Comment_My_Code_in_HTML.html">How I Learned to Comment My Code in HTML - Making Code Easy to Read and Maintain</a></li>
+                            <li><a href="./HTML_Meta_Tags.html">HTML Meta Tags – Controlling How My Page Appears in Search Engines</a></li>
+                            <li><a href="./Creating_Navigation_Menus_with_HTML.html">Creating Navigation Menus with HTML - Making Site Easy to Explore</a></li>
+                            <li><a href="./HTML_Best_Practices_I’m_Following_as_a_Beginner.html">HTML Best Practices I’m Following as a Beginner - Simple Rules for Better Web Pages</a></li>
+                            <li><a href="./Building_My_First_Full_HTML_Page.html">Building My First Full HTML Page – What I Learned</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+            <!-- form container -->
+
+
+
+
+            <div id="mlb2-31121348" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-31121348">
+                <div class="ml-form-align-center ">
+                    <div class="ml-form-embedWrapper embedForm">
+
+
+
+
+                        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+
+                            <div class="ml-form-embedContent" style=" ">
+
+                                <h4>Subscribe to switzcodes</h4>
+                                Get updates on HTML, CSS & JavaScript tutorials
+
+                            </div>
+
+                            <form class="ml-block-form"
+                                action="https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/subscribe"
+                                data-code="" method="post" target="_blank">
+                                <div class="ml-form-formContent">
+
+
+
+                                    <div class="ml-form-fieldRow ">
+                                        <div class="ml-field-group ml-field-name">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="name" type="text" class="form-control" data-inputmask=""
+                                                name="fields[name]" placeholder="Enter your fullname"
+                                                autocomplete="given-name">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="ml-form-fieldRow ml-last-item">
+                                        <div
+                                            class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="email" aria-required="true" type="email"
+                                                class="form-control" data-inputmask="" name="fields[email]"
+                                                placeholder="Enter your email" autocomplete="email">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Privacy policy -->
+
+                                <!-- /Privacy policy -->
+
+
+                                <input type="hidden" name="ml-submit" value="1">
+
+                                <div class="ml-form-embedSubmit">
+
+                                    <button type="submit" class="primary">Subscribe</button>
+
+                                    <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                        <div class="ml-form-embedSubmitLoad"></div>
+                                        <span class="sr-only">Loading...</span>
+                                    </button>
+                                </div>
+
+
+                                <input type="hidden" name="anticsrf" value="true">
+                            </form>
+                        </div>
+
+                        <div class="ml-form-successBody row-success" style="display: none">
+
+                            <div class="ml-form-successContent">
+
+                                <h4>Thank you!</h4>
+
+                                <p>You have successfully joined our subscriber list.</p>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer_links">
+                <div class="links_container">
+                    <h3>About switzCodes</h3>
+                    <p>Sharing my journey of learning HTML, CSS and JavaScript one day at a time.</p>
+                </div>
+                <div class="links_container">
+                    <h3>Quick Links</h3>
+                    <p><a href="../../index.html">Home</a></p>
+                    <p><a href="../../quickLinks/privacy_policy/privacy_policy.html">Privacy Policy</a></p>
+                    <p><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a></p>
+                    <p><a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                    </p>
+                    <p><a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a></p>
+                </div>
+                <div class="links_container">
+                    <h3>Follow me</h3>
+                    <p><a href="#">Twitter</a></p>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <p>&copy; 2025 switzCodes. All rights reserved.</p>
+        </footer>
+    </div>
+
+   <script src="../script/hamburgerToggle.js" defer></script>
+    <script src="../script/search_script.js" defer></script>
+
+    <!-- from mailerLite -->
+
+    <script>
+        function ml_webform_success_31121348() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-31121348 .row-success').show();
+            $('.ml-subscribe-form-31121348 .row-form').hide();
+        }
+    </script>
+
+
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/takel")
+    </script>
+</body>
+
+</html>

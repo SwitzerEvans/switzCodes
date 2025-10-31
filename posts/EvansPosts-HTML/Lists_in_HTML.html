@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="../../assets/switzcodeslogo.png" type="image/png">
+
+    <!-- ✅ Stylesheet -->
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+
+<body>
+    <div class="body_container">
+        <div class="hamburger-menu">
+            <div class="hamburger-menu-link">
+                <span id="close-hamurger">X</span>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../index.html">Home</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../quickLinks/about/about.html">About</a>
+            </div>
+
+            <div id="hamburger-contact" class="hamburger-menu-link">
+                <a href="../../quickLinks/contact/contact.html">Contact</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </div>
+        </div>
+
+        <header class="nav-search">
+            <div class="fore_container">
+                <h1>switz<span>Codes</span></h1>
+                <div class="head_link">
+                    <a href="../../index.html">Home</a>
+                    <a href="../../quickLinks/about/about.html">About</a>
+                    <a href="../../quickLinks/contact/contact.html">Contact</a>
+                </div>
+
+                <div class="header-icons">
+                    <img src="../../assets/search.png" class="search-icon">
+                    <div class="hamburg_icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="head-icon">
+                    <input type="text" placeholder="search posts..." id="search-input-desktop"
+                        oninput="searchPostsDesktop()">
+                    <div class="search-desktop">
+                        <div id="search-result-desktop">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="search-input-mobile" class="search">
+                <span class="js-close-mobile-search">X</span>
+                <div class="search-container">
+                    <input type="text" placeholder="Search Posts..." id="search_input" oninput="searchPostsMobile()">
+                </div>
+                <div id="search-result">
+                </div>
+            </div>
+
+        </header>
+
+        <div class="button_container">
+            <nav>
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </nav>
+        </div>
+
+        <main class="main_container">
+            <div class="mainposts_container" id="main-content">
+                <section class="postdiv_container">
+                    <img src="../../assets/Lists_in_HTML.webp" alt="switzCodes banner for post 'Lists in HTML – Ordered and Unordered Lists' 
+                    featuring dark blue background with modern geometric shapes">
+                    <h1>
+                        📋 Lists in HTML - Ordered and Unordered Lists
+                    </h1>
+                    <p class="date">📅 August 17, 2025</p>
+                    <p>✍️ By Evans</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <p>Hey everyone! 👋</p>
+                    <p>
+                        In this post, I'm talking about something I just learned — lists in HTML. It might sound basic,
+                        but lists are super
+                        useful when writing tutorials, menus, steps, or anything where you want to organize information.
+                    </p>
+                    <p>Lists help you group related items together, and trust me, they make your content look clean and
+                        structured. Let's break them down. 🧾</p>
+
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧱 The Two Main Types of Lists</h3>
+                    <p>
+                        HTML gives us two main types of lists:
+                    </p>
+                    <ol>
+                        <li>Ordered Lists (&lt;ol&gt;) - for numbered lists</li>
+                        <li>Unordered Lists (&lt;ul&gt;) - for bulleted lists</li>
+                    </ol>
+                    <p>
+                        Let me show you how they work 👇
+                    </p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🔢 Ordered Lists (&lt;ol&gt;)</h3>
+                    <p>
+                        Ordered lists use numbers. The tag for it is &lt;ol&gt;, which stands for “Ordered List”.
+                        Each item inside the list goes in an &lt;li&gt; tag (that means “List Item”).
+                    </p>
+
+
+                    <div class="code_container">
+                        <pre><code>
+&lt;ol&gt;
+  &lt;li>Learn HTML basics&lt;/li&gt;
+  &lt;li>Understand CSS styling&lt;/li&gt;
+  &lt;li>Move on to JavaScript&lt;/li&gt;
+&lt;/ol&gt;
+                            </code></pre>
+                    </div>
+                    <p>That would display as:</p>
+                    <ol>
+                        <li>Learn HTML basics</li>
+                        <li>Understand CSS styling</li>
+                        <li>Move on to JavaScript</li>
+                    </ol>
+                    <p><strong>💡 Tip</strong>: You can even start your list with a different number using the start attribute:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;ol start="5"&gt;
+  &lt;li&gt;Step five&lt;/li&gt;
+  <li>Step six&lt;/li&gt;
+&lt;/ol&gt;
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>⚫ Unordered Lists (&lt;ul&gt;)</h3>
+                    <p>
+                        Unordered lists use bullets instead of numbers. The tag is &lt;ul&gt; (stands for “Unordered List”).
+                        They're great for general collections of items that don’t have a specific order.
+                    </p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+                        </code></pre>
+                    </div>
+                    <p>
+                        That will show up as:
+                    </p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <p>You can also nest lists inside each other to create sub-lists.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;ul&gt;
+  &lt;li>Frontend
+    &lt;ul&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Backend&lt;/li&gt;
+&lt;/ul&gt;
+                        </code></pre>
+                    </div>
+                    <p>This will create sub-lists under “Frontend” — super helpful for organizing things clearly.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧠 What I Learned</h3>
+                    <ul>
+                        <li>Use &lt;ol&gt; when order matters</li>
+                        <li>Use &lt;ul&gt; when it doesn't</li>
+                        <li>Always wrap list items in &lt;li&gt;</li>
+                        <li>You can style lists later using CSS (like removing bullets or changing numbers)</li>
+                    </ul>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>😅 Mistakes I Made</h3>
+                    <ul>
+                        <li>❌ Forgot to close the &lt;li&gt; tags (that broke the whole list)</li>
+                        <li>❌ Used &lt;li&gt; without wrapping it in &lt;ul&gt; or &lt;ol&gt; (it won't work alone!)</li>
+                        <li>❌ Tried to put paragraphs directly inside &lt;ul&gt; — didn't look right</li>
+                    </ul>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧪 Real Example I Practiced</h3>
+                    <div class="code_container">
+                        <pre><code>
+&lt;h2&gt;Things I've Learned So Far:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Basic HTML Structure&lt;/li&gt;
+  &lt;li&gt;Headings and Paragraphs&lt;/li&gt;
+  &lt;li&gt;Formatting Text&lt;/li&gt;
+  &lt;li&gt;Creating Links&lt;/li&gt;
+  &lt;li&gt;Adding Images&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </code></pre>
+                    </div>
+                    <p>Simple, clean, and helpful!</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🎯 Final Thoughts</h3>
+                    <p>
+                        Lists are one of those small things that make a website feel neat and organized. 
+                        Now that I know how to use them, I can write tutorials, to-do lists, or even recipe 
+                        steps (yes, I'm hungry 😅).
+                    </p>
+
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>👉 What's Next?</h3>
+                    <p>
+                        Next, I'll be learning about Creating Tables - Organizing Data in HTML — where we'll use rows and 
+                        columns to display information in a nice grid format.
+                    </p>
+                    <p>As always, thanks for reading!</p>
+                    <p>Stay curious and keep coding 🚀</p>
+                    <p>— Evans 💻</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <div class="navigate_container">
+                        <a href="./Adding_Images_with_img.html">← Previous Post</a>
+                        <a href="./Creating_Tables.html">Next Post →</a>
+                    </div>
+                </section>
+            </div>
+
+            <div class="mainposts_container">
+                <div class="postdiv_container">
+                    <div class="posts_header">
+                        <h3>Posts</h3>
+                    </div>
+                    <div class="overflow_posts">
+                        <ol>
+                            <li><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">Introduction to
+                                    HTML - My First Step Into Web Development</a></li>
+                            <li><a href="./Understanding_the_HTML_Document_Structure.html">Understanding the HTML
+                                    Document Structure - Building the Foundation of Every Web Page</a></li>
+                            <li><a href="./Headings_and_Paragraphs_Writing_Basic_Page_Content.html">Headings and Paragraphs - Writing Basic Page Content</a></li>
+                            <li><a href="./HTML_Text_Formatting.html">HTML Text Formatting - Bold, Italic, Underline and More</a></li>
+                            <li><a href="./Creating_Links_with_the_a_Tag.html">Creating Links with the &lt;a&gt; Tag - Linking Web Pages</a></li>
+                            <li><a href="./Adding_Images_with_img.html">Adding Images with &lt;img&gt; - Making Web Pages Visual</a></li>
+                            <li><a href="./Lists_in_HTML.html">Lists in HTML - Ordered and Unordered Lists</a></li>
+                            <li><a href="./Creating_Tables.html">Creating Tables - Organizing Data in HTML</a></li>
+                            <li><a href="./HTML_Forms.html">HTML Forms - How I Learned to Collect User Input</a></li>
+                            <li><a href="./Input_Types_and_Form_Elements.html">Input Types and Form Elements - Text, Radio, Checkbox, Button</a></li>
+                            <li><a href="./HTML_Attributes.html">HTML Attributes - What Makes Tags More Powerful</a></li>
+                            <li><a href="./HTML_Semantic_Tags.html">HTML Semantic Tags - Writing Clean and Meaningful Code</a></li>
+                            <li><a href="./HTML_Entities.html">HTML Entities - Displaying Special Characters</a></li>
+                            <li><a href="./Embedding_Videos_and_Audio.html">Embedding Videos and Audio - Making Pages Multimedia</a></li>
+                            <li><a href="./Using_div_and_span.html">Using &lt;div&gt; and &lt;span&gt; - Grouping and Styling Elements</a></li>
+                            <li><a href="./How_I_Learned_to_Comment_My_Code_in_HTML.html">How I Learned to Comment My Code in HTML - Making Code Easy to Read and Maintain</a></li>
+                            <li><a href="./HTML_Meta_Tags.html">HTML Meta Tags – Controlling How My Page Appears in Search Engines</a></li>
+                            <li><a href="./Creating_Navigation_Menus_with_HTML.html">Creating Navigation Menus with HTML - Making Site Easy to Explore</a></li>
+                            <li><a href="./HTML_Best_Practices_I’m_Following_as_a_Beginner.html">HTML Best Practices I’m Following as a Beginner - Simple Rules for Better Web Pages</a></li>
+                            <li><a href="./Building_My_First_Full_HTML_Page.html">Building My First Full HTML Page – What I Learned</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+            <!-- form container -->
+
+
+
+
+            <div id="mlb2-31121348" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-31121348">
+                <div class="ml-form-align-center ">
+                    <div class="ml-form-embedWrapper embedForm">
+
+
+
+
+                        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+
+                            <div class="ml-form-embedContent" style=" ">
+
+                                <h4>Subscribe to switzcodes</h4>
+                                Get updates on HTML, CSS & JavaScript tutorials
+
+                            </div>
+
+                            <form class="ml-block-form"
+                                action="https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/subscribe"
+                                data-code="" method="post" target="_blank">
+                                <div class="ml-form-formContent">
+
+
+
+                                    <div class="ml-form-fieldRow ">
+                                        <div class="ml-field-group ml-field-name">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="name" type="text" class="form-control" data-inputmask=""
+                                                name="fields[name]" placeholder="Enter your fullname"
+                                                autocomplete="given-name">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="ml-form-fieldRow ml-last-item">
+                                        <div
+                                            class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="email" aria-required="true" type="email"
+                                                class="form-control" data-inputmask="" name="fields[email]"
+                                                placeholder="Enter your email" autocomplete="email">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Privacy policy -->
+
+                                <!-- /Privacy policy -->
+
+
+                                <input type="hidden" name="ml-submit" value="1">
+
+                                <div class="ml-form-embedSubmit">
+
+                                    <button type="submit" class="primary">Subscribe</button>
+
+                                    <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                        <div class="ml-form-embedSubmitLoad"></div>
+                                        <span class="sr-only">Loading...</span>
+                                    </button>
+                                </div>
+
+
+                                <input type="hidden" name="anticsrf" value="true">
+                            </form>
+                        </div>
+
+                        <div class="ml-form-successBody row-success" style="display: none">
+
+                            <div class="ml-form-successContent">
+
+                                <h4>Thank you!</h4>
+
+                                <p>You have successfully joined our subscriber list.</p>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer_links">
+                <div class="links_container">
+                    <h3>About switzCodes</h3>
+                    <p>Sharing my journey of learning HTML, CSS and JavaScript one day at a time.</p>
+                </div>
+                <div class="links_container">
+                    <h3>Quick Links</h3>
+                    <p><a href="../../index.html">Home</a></p>
+                    <p><a href="../../quickLinks/privacy_policy/privacy_policy.html">Privacy Policy</a></p>
+                    <p><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a></p>
+                    <p><a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                    </p>
+                    <p><a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a></p>
+                </div>
+                <div class="links_container">
+                    <h3>Follow me</h3>
+                    <p><a href="#">Twitter</a></p>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <p>&copy; 2025 switzCodes. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="../script/hamburgerToggle.js" defer></script>
+    <script src="../script/search_script.js" defer></script>
+
+    <!-- from mailerLite -->
+
+    <script>
+        function ml_webform_success_31121348() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-31121348 .row-success').show();
+            $('.ml-subscribe-form-31121348 .row-form').hide();
+        }
+    </script>
+
+
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/takel")
+    </script>
+</body>
+
+</html>

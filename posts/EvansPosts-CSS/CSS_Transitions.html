@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="../../assets/switzcodeslogo.png" type="image/png">
+
+    <!-- ✅ Stylesheet -->
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <div class="body_container">
+        <div class="hamburger-menu">
+            <div class="hamburger-menu-link">
+                <span id="close-hamurger">X</span>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../index.html">Home</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../quickLinks/about/about.html">About</a>
+            </div>
+
+            <div id="hamburger-contact" class="hamburger-menu-link">
+                <a href="../../quickLinks/contact/contact.html">Contact</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </div>
+        </div>
+
+        <header class="nav-search">
+            <div class="fore_container">
+                <h1>switz<span>Codes</span></h1>
+                <div class="head_link">
+                    <a href="../../index.html">Home</a>
+                    <a href="../../quickLinks/about/about.html">About</a>
+                    <a href="../../quickLinks/contact/contact.html">Contact</a>
+                </div>
+
+                <div class="header-icons">
+                    <img src="../../assets/search.png" class="search-icon">
+                    <div class="hamburg_icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="head-icon">
+                    <input type="text" placeholder="search posts..." id="search-input-desktop"
+                        oninput="searchPostsDesktop()">
+                    <div class="search-desktop">
+                        <div id="search-result-desktop"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="search-input-mobile" class="search">
+                <span class="js-close-mobile-search">X</span>
+                <div class="search-container">
+                    <input type="text" placeholder="Search Posts..." id="search_input" oninput="searchPostsMobile()">
+                </div>
+                <div id="search-result"></div>
+            </div>
+        </header>
+
+        <div class="button_container">
+            <nav>
+                <a href="../EvansPosts-HTML/Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </nav>
+        </div>
+
+        <main class="main_container">
+            <div class="mainposts_container" id="main-content">
+
+                <section class="postdiv_container">
+                    <!-- <img src="../../assets/#"
+                    alt="#"> -->
+                    <h1>🎯 CSS Selectors – Targeting the Right Elements</h1>
+                    <p class="date">📅 October 6, 2025</p>
+                    <p>✍️ By Evans</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <p>Hey there, welcome back to switzCodes! 👋</p>
+                    <p>
+                        After understanding how CSS works — with selectors and properties — I started wondering:
+                    </p>
+                    <p>
+                        💭<em> “Where exactly do I put this CSS code?”</em>
+                    </p>
+                    <p>
+                        That’s when I discovered that there are three main ways to add CSS to a webpage:
+                    <ol>
+                        <li>Inline</li>
+                        <li>Internal</li>
+                        <li>External</li>
+                    </ol>
+                    </p>
+
+                    <p>
+                        Each method works, but they serve different purposes. Let’s explore them one by one — with
+                        examples, pros, and cons — so you can choose wisely when styling your own site.
+                    </p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧩 Inline CSS – The Quickest Way to Style an Element</h3>
+                    <p>
+                        Inline CSS means you add the style <em>directly</em> to an HTML tag using the style attribute.
+                    </p>
+                    <p>
+                        Example:
+                    </p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;p style="color: blue; font-size: 20px;"&gt;This text is blue and larger!&lt;/p&gt;
+                        </code></pre>
+                    </div>
+                    <p>The browser reads that and applies the styles immediately to just that one element.</p>
+                    <h4>✅ Advantages:</h4>
+                    <ul>
+                        <li>Great for quick tests or single-use styling.</li>
+                        <li>No need for a separate file.</li>
+                        <li>You see instant results.</li>
+                    </ul>
+
+                    <h4>❌ Disadvantages:</h4>
+                    <ul>
+                        <li>Clutters your HTML.</li>
+                        <li>Hard to reuse — you’d have to repeat styles on every element.</li>
+                        <li>Difficult to maintain on large pages.</li>
+                    </ul>
+                    <p>
+                        <strong>💡 When I first tried it</strong>, I thought it was super convenient… until my page got
+                        messy and I had 20 different
+                    <p> tags each with their own styles.
+                        That’s when I realized — inline CSS is okay for learning, but not for real projects.
+                    </p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🏠 Internal CSS – Styling in the Same File</h3>
+
+                    <p>Internal CSS means writing your CSS in a &lt;style&gt; block inside the &lt;head&gt; section of
+                        your HTML file.</p>
+
+                    <div class="code_container">
+                        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My Styled Page&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      background-color: #f3f4f6;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: darkslateblue;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Welcome to switzCodes!&lt;/h1&gt;
+  &lt;p&gt;This page uses internal CSS.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
+                    <p>The styles here apply only to this single HTML file.</p>
+                    <h4>✅ Advantages:</h4>
+                    <ul>
+                        <li>Keeps everything in one file.</li>
+                        <li>Easier to manage than inline CSS.</li>
+                        <li>Great for small projects or testing ideas.</li>
+                    </ul>
+                    <h4>❌ Disadvantages:</h4>
+                    <ul>
+                        <li>Doesn’t scale well for multiple pages.</li>
+                        <li>You can’t reuse the same styles across different files.</li>
+                    </ul>
+                    <p>
+                        When I built my first few practice pages, internal CSS felt perfect — until I made
+                        five pages that all needed the same background color and font. I had to update each page one by
+                        one 😩.
+                    </p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🌍 External CSS – The Best and Most Professional Way</h3>
+                    <p>This is the real deal.</p>
+                    <p>External CSS means you put your styles in a separate .css file and link it to your HTML using the
+                        &lt;link&gt; tag.</p>
+                    <p>Example folder structure:</p>
+
+                    <div class="code_container">
+                        <pre><code>
+project/
+ ├── index.html
+ ├── about.html
+ └── style.css
+                        </code></pre>
+                    </div>
+                    <p>Your HTML:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+                        </code></pre>
+                    </div>
+                    <p>Your CSS (style.css):</p>
+                    <div class="code_container">
+                        <pre><code>
+body {
+  background-color: white;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  color: #007bff;
+  text-align: center;
+}
+                        </code></pre>
+                    </div>
+                    <p>Now every HTML file that links to this CSS file shares the same styling. If you change one line
+                        in style.css, every page updates automatically. 🎉</p>
+
+                    <h4>✅ Advantages:</h4>
+                    <ul>
+                        <li>Clean and professional.</li>
+                        <li>Makes your site faster to load and easier to maintain.</li>
+                        <li>Perfect for multi-page websites (like switzCodes).</li>
+                        <li>Encourages reusability and good project structure.</li>
+                    </ul>
+
+                    <h4>❌ Disadvantages:</h4>
+                    <ul>
+                        <li>Slightly more setup (creating and linking files).</li>
+                        <li>Needs an internet connection if the CSS file is hosted externally.</li>
+                    </ul>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🔍 Comparison Table</h3>
+                    <div class="table_container">
+                        <table>
+                            <tr>
+                                <th>Method</th>
+                                <th>Location</th>
+                                <th>Best For</th>
+                                <th>Reusability</th>
+                                <th>Maintenance</th>
+                            </tr>
+                            <tr>
+                                <td>Inline</td>
+                                <td>Inside element</td>
+                                <td>Tiny tweaks</td>
+                                <td>❌ None</td>
+                                <td>❌ Hard</td>
+                            </tr>
+                            <tr>
+                                <td>Internal</td>
+                                <td>In the &lt;head&gt; tag</td>
+                                <td>One-page sites</td>
+                                <td>⚠️ Limited</td>
+                                <td>⚠️ Medium</td>
+                            </tr>
+                            <tr>
+                                <td>External</td>
+                                <td>Separate .css file</td>
+                                <td>Large projects</td>
+                                <td>✅ Excellent</td>
+                                <td>✅ Easy</td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧠 My Experience</h3>
+                    <p>
+                        When I started building switzCodes, I first used internal CSS because it was fast.
+                        But as I added more pages for HTML, CSS, and soon JavaScript, I realized I needed a single style
+                        file to keep everything consistent.
+                    </p>
+                    <p>
+                        That’s when I switched to external CSS, and it changed everything.
+                        Suddenly, updating one color or font updated my entire website. It made my code neater, my site
+                        faster, and my workflow smoother.
+                    </p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🎯 Final Thoughts</h3>
+                    <p>
+                        Understanding the three ways to add CSS is a major step in your web design journey.
+                        Inline is quick, internal is decent for small pages, but external CSS is what professional
+                        developers use every day.
+                    </p>
+                        <p>Now that I’ve mastered how to include CSS in my pages, I’m ready to explore selectors — the real key to targeting elements efficiently.</p>
+                    <p>
+                        Thanks for reading!Catch you in the next post,
+                    </p>
+                    <p>— Evans 💻</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <div class="navigate_container">
+                        <a href="#">← Previous Post</a>
+                        <a href="#">Next Post →</a>
+                    </div>
+                </section>
+
+
+            </div>
+
+            <div class="mainposts_container">
+                <div class="postdiv_container">
+                    <div class="posts_header">
+                        <h3>Posts</h3>
+                    </div>
+                    <div class="overflow_posts">
+                       <ol>
+                            <li><a href="./Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">Introduction to CSS – My First Step Into Styling Web Pages</a></li>
+                            <li><a href="./Understanding_How_CSS_Works.html">Understanding How CSS Works – From Selectors to Properties</a></li>
+                            <li><a href="./Ways_to_Add_CSS.html">Ways to Add CSS – Inline, Internal, and External Stylesheets</a></li>
+                            <li><a href="./CSS_Selectors.html">CSS Selectors – Targeting the Right Elements</a></li>
+                            <li><a href="./Colors_in_CSS.html">Colors in CSS – From Names to Hex, RGB, and HSL</a></li>
+                            <li><a href="./Styling_Text.html">Styling Text – Fonts, Sizes, and Line Spacing</a></li>
+                            <li><a href="./CSS_Box_Model.html">CSS Box Model – Margin, Border, Padding, and Content</a></li>
+                            <li><a href="./Backgrounds_in_CSS.html">Backgrounds in CSS – Colors, Gradients, and Images</a></li>
+                            <li><a href="./Styling_Links.html">Styling Links – Changing Colors, Hover Effects, and More</a></li>
+                            <li><a href="./Working_with_Lists_in_CSS.html">Working with Lists in CSS – Bullets, Numbers, and Custom Styles</a></li>
+                            <li><a href="./Styling_Tables.html">Styling Tables – Making Data Look Good</a></li>
+                            <li><a href="./CSS_Display_and_Visibility.html">CSS Display and Visibility – Block, Inline, Inline-Block, and None</a></li>
+                            <li><a href="./Positioning_in_CSS.html">Positioning in CSS – Static, Relative, Absolute, and Fixed</a></li>
+                            <li><a href="./Flexbox.html">Flexbox – How I Learned to Arrange Elements Easily</a></li>
+                            <li><a href="./CSS_Grid.html">CSS Grid – Creating Complex Layouts with Ease</a></li>
+                            <li><a href="./Styling_Forms.html">Styling Forms – Inputs, Buttons, and Select Fields</a></li>
+                            <li><a href="./CSS_Pseudo_classes_and_Pseudo_elements.html">CSS Pseudo-classes and Pseudo-elements – Adding Extra Style Without Extra HTML</a></li>
+                            <li><a href="./CSS_Transitions.html">CSS Transitions – Making Smooth Hover and Click Effects</a></li>
+                            <li><a href="./CSS_Animations.html">CSS Animations – Bringing Elements to Life</a></li>
+                            <li><a href="./Responsive_Design.html">Responsive Design – Making My Pages Look Good on Any Device</a></li>
+                            <li><a href="./CSS_Media_Queries.html">CSS Media Queries – Styling Based on Screen Size</a></li>
+                            <li><a href="./CSS_Variables.html">CSS Variables – Reusing Styles Like a Pro</a></li>
+                            <li><a href="./CSS_Best_Practices_I’m_Following_as_a_Beginner.html">CSS Best Practices I’m Following as a Beginner</a></li>
+                            <li><a href="./Building_My_First_Full_CSS_Styled_Web_Page.html">Building My First Full CSS-Styled Web Page – What I Learned</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- form container -->
+
+
+
+
+            <div id="mlb2-31121348" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-31121348">
+                <div class="ml-form-align-center ">
+                    <div class="ml-form-embedWrapper embedForm">
+
+
+
+
+                        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+
+                            <div class="ml-form-embedContent" style=" ">
+
+                                <h4>Subscribe to switzcodes</h4>
+                                Get updates on HTML, CSS & JavaScript tutorials
+
+                            </div>
+
+                            <form class="ml-block-form"
+                                action="https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/subscribe"
+                                data-code="" method="post" target="_blank">
+                                <div class="ml-form-formContent">
+
+
+
+                                    <div class="ml-form-fieldRow ">
+                                        <div class="ml-field-group ml-field-name">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="name" type="text" class="form-control" data-inputmask=""
+                                                name="fields[name]" placeholder="Enter your fullname"
+                                                autocomplete="given-name">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="ml-form-fieldRow ml-last-item">
+                                        <div
+                                            class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="email" aria-required="true" type="email"
+                                                class="form-control" data-inputmask="" name="fields[email]"
+                                                placeholder="Enter your email" autocomplete="email">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Privacy policy -->
+
+                                <!-- /Privacy policy -->
+
+
+                                <input type="hidden" name="ml-submit" value="1">
+
+                                <div class="ml-form-embedSubmit">
+
+                                    <button type="submit" class="primary">Subscribe</button>
+
+                                    <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                        <div class="ml-form-embedSubmitLoad"></div>
+                                        <span class="sr-only">Loading...</span>
+                                    </button>
+                                </div>
+
+
+                                <input type="hidden" name="anticsrf" value="true">
+                            </form>
+                        </div>
+
+                        <div class="ml-form-successBody row-success" style="display: none">
+
+                            <div class="ml-form-successContent">
+
+                                <h4>Thank you!</h4>
+
+                                <p>You have successfully joined our subscriber list.</p>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer_links">
+                <div class="links_container">
+                    <h3>About switzCodes</h3>
+                    <p>Sharing my journey of learning HTML, CSS and JavaScript one day at a time.</p>
+                </div>
+                <div class="links_container">
+                    <h3>Quick Links</h3>
+                    <p><a href="../../index.html">Home</a></p>
+                    <p><a href="../../quickLinks/privacy_policy/privacy_policy.html">Privacy Policy</a></p>
+                    <p><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a></p>
+                    <p><a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                    </p>
+                    <p><a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a></p>
+                </div>
+                <div class="links_container">
+                    <h3>Follow me</h3>
+                    <p><a href="#">Twitter</a></p>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <p>&copy; 2025 switzCodes. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="../script/hamburgerToggle.js"></script>
+    <script src="../script/search_script.js"></script>
+
+    <!-- from mailerLite -->
+
+    <script>
+        function ml_webform_success_31121348() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-31121348 .row-success').show();
+            $('.ml-subscribe-form-31121348 .row-form').hide();
+        }
+    </script>
+
+
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/takel")
+    </script>
+</body>
+
+</html>

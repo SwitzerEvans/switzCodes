@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Attributes - What Makes Tags More Powerful - switzCodes</title>
+    <meta name="description"
+        content="Learn about different HTML input types and form elements like text fields, radio buttons, checkboxes, and submit buttons.">
+    <meta name="keywords"
+        content="HTML input types, text input, radio button, checkbox, submit button, forms, switzCodes">
+    <meta name="author" content="Evans">
+    <meta name="robots" content="index, follow">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="../../assets/switzcodeslogo.png" type="image/png">
+
+    <!-- ✅ Stylesheet -->
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <div class="body_container">
+        <div class="hamburger-menu">
+            <div class="hamburger-menu-link">
+                <span id="close-hamurger">X</span>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../index.html">Home</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../quickLinks/about/about.html">About</a>
+            </div>
+
+            <div id="hamburger-contact" class="hamburger-menu-link">
+                <a href="../../quickLinks/contact/contact.html">Contact</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </div>
+        </div>
+
+        <header class="nav-search">
+            <div class="fore_container">
+                <h1>switz<span>Codes</span></h1>
+                <div class="head_link">
+                    <a href="../../index.html">Home</a>
+                    <a href="../../quickLinks/about/about.html">About</a>
+                    <a href="../../quickLinks/contact/contact.html">Contact</a>
+                </div>
+
+                <div class="header-icons">
+                    <img src="../../assets/search.png" class="search-icon">
+                    <div class="hamburg_icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="head-icon">
+                    <input type="text" placeholder="search posts..." id="search-input-desktop"
+                        oninput="searchPostsDesktop()">
+                    <div class="search-desktop">
+                        <div id="search-result-desktop"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="search-input-mobile" class="search">
+                <span class="js-close-mobile-search">X</span>
+                <div class="search-container">
+                    <input type="text" placeholder="Search Posts..." id="search_input" oninput="searchPostsMobile()">
+                </div>
+                <div id="search-result"></div>
+            </div>
+        </header>
+
+        <div class="button_container">
+            <nav>
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </nav>
+        </div>
+
+        <main class="main_container">
+            <div class="mainposts_container" id="main-content">
+
+                <section class="postdiv_container">
+                    <img src="../../assets/HTML_Attributes.webp" 
+     alt="Banner image for a switzCodes blog post titled ‘HTML Attributes – What Makes Tags More Powerful,’ featuring the switzCodes logo in dark blue, white, and green tones with tag-style graphics.">
+                    <h1>📄 HTML Attributes – What Makes Tags More Powerful</h1>
+                    <p class="date">📅 September 20, 2025</p>
+                    <p>✍️ By Evans</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <p>Hey friends! 👋</p>
+                    <p>
+                        When I first started with HTML, I thought tags were everything. You know — &lt;p&gt;,
+                        &lt;h1&gt;, &lt;img&gt;, and all that. But soon, I
+                        discovered something that makes those tags way more powerful: Attributes.
+                    </p>
+                    <p>
+                        Attributes are like the extra settings or instructions that change how a tag behaves. Think of
+                        them as tiny helpers that give more meaning and control to your HTML.
+                    </p>
+                    <p>Let's break it down. 👇</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>⚙️ What Are Attributes?</h3>
+                    <p>
+                        Attributes are placed inside HTML tags and usually come in name-value pairs like this:
+                    </p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;tagname attribute="value"&gt;Content&lt;/tagname&gt;
+                        </code></pre>
+                    </div>
+                    <p>Example:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;a href="https://switzcodes.com"&gt;Visit SwitzCodes&lt;/a&gt;
+                        </code></pre>
+                    </div>
+                    <p>Here,</p>
+                    <ul>
+                        <li>href is the attribute name, and</li>
+                        <li>"https://switzcodes.com" is its value.</li>
+                    </ul>
+                    <p>This simple attribute tells the browser where the link should go when clicked.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧱 Some Common HTML Attributes I’ve Learned</h3>
+                    <p>Here are a few I use a lot:</p>
+                    <h4>🔗 href</h4>
+                    <p>Used in &lt;a&gt; tags to specify the link destination.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;a href="https://switzcodes.com"&lt;Go to my blog&lt;/a&gt;
+                       </code></pre>
+                    </div>
+
+                    <h4>🖼️ src</h4>
+                    <p>Used in &lt;img&gt; or &lt;script&gt; tags to define the file source.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;img src="images/profile.png" alt="My profile photo"&gt;
+                       </code></pre>
+                    </div>
+
+                    <h4>🧠 alt</h4>
+                    <p>Used with images — it shows text if the image doesn't load (and helps with accessibility).</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;img src="logo.png" alt="SwitzCodes Logo"&gt;
+                       </code></pre>
+                    </div>
+
+                    <h4>🆔 id</h4>
+                    <p>Gives an element a unique identity. Useful for styling or linking to that element later.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;p id="intro"&gt;Welcome to my portfolio!&lt;/p&gt;
+                       </code></pre>
+                    </div>
+
+                    <h4>🏷️ class</h4>
+                    <p>Used to group elements with similar styles.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;p class="highlight"&gt;This paragraph is styled differently.&lt;/p&gt;
+                       </code></pre>
+                    </div>
+
+                    <h4>🎨 style</h4>
+                    <p>Lets you apply inline CSS directly to an element.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;h2 style="color: blue;"&gt;Hello World!&lt;/h2&gt;
+                       </code></pre>
+                    </div>
+
+                    <h4>💬 title</h4>
+                    <p>Displays a small tooltip when you hover over the element.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;p title="This is a tooltip"&gt;Hover over me!&lt;/p&gt;
+                       </code></pre>
+                    </div>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>💡 Why Attributes Matter</h3>
+                    <p>When I first understood attributes, I realized — they're what make HTML flexible and
+                        customizable.</p>
+                    <p>Without attributes, everything would look and behave the same.</p>
+                    <p>With them, I can:</p>
+                    <ul>
+                        <li>Link pages together</li>
+                        <li>Add images</li>
+                        <li>Style specific elements</li>
+                        <li>Control layout and accessibility</li>
+                    </ul>
+                    <p>Basically, attributes bring <em>life</em> and <em>control</em> to HTML.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧠 Quick Example I Tried</h3>
+                    <p>Here's a simple mini page I practiced with:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;HTML Attributes Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1 class="main-heading" style="color: teal;"&gt;Hello, World!&lt;/h1&gt;
+    &lt;p id="intro" title="Welcome note"&gt;Welcome to my learning journey on SwitzCodes.&lt;/p&gt;
+    &lt;a href="https://switzcodes.com" target="_blank">Visit my blog&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
+                    <p>It's a small example — but it shows how attributes change everything!</p>
+                </section>
+                <section class="postdiv_container">
+                    <h3>💬 Some Beginner Tips</h3>
+                    <ul>
+                        <li>Always wrap attribute values in quotes ("").</li>
+                        <li>Use id for unique elements and class for reusable ones.</li>
+                        <li>Avoid too many inline style attributes — external CSS is cleaner.</li>
+                        <li>Remember: attributes make your HTML smarter, not just longer. 😅</li>
+                    </ul>
+                </section>
+                <section class="postdiv_container">
+                    <h3>🎯 What I Learned</h3>
+                    <p>Learning attributes gave me a new appreciation for how websites work.</p>
+                    <p>Now, I can control not just what’s on the page, but how it looks and behaves.</p>
+                    <p>It’s like I’ve unlocked a second layer of HTML. 💪</p>
+                </section>
+                <secrion class="postdiv_container">
+                    <h3>👉 What’s Next?</h3>
+                    <p>Next up, I’ll be exploring HTML Semantic Tags,
+                        where I’ll learn how tags like &lt;header&gt;, &lt;main&gt;, and &lt;footer&gt; help make web
+                        pages more organized and accessible.</p>
+                    <p>See you in the next post! 🙌</p>
+                    <p>— Evans 💻</p>
+                </secrion>
+
+                <section class="postdiv_container">
+                    <div class="navigate_container">
+                        <a href="./Input_Types_and_Form_Elements.html">← Previous Post</a>
+                        <!-- correct under -->
+                        <a href="./HTML_Semantic_Tags.html">Next Post →</a>
+                    </div>
+                </section>
+
+
+            </div>
+
+            <div class="mainposts_container">
+                <div class="postdiv_container">
+                    <div class="posts_header">
+                        <h3>Posts</h3>
+                    </div>
+                    <div class="overflow_posts">
+                       <ol>
+                            <li><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">Introduction to
+                                    HTML - My First Step Into Web Development</a></li>
+                            <li><a href="./Understanding_the_HTML_Document_Structure.html">Understanding the HTML
+                                    Document Structure - Building the Foundation of Every Web Page</a></li>
+                            <li><a href="./Headings_and_Paragraphs_Writing_Basic_Page_Content.html">Headings and Paragraphs - Writing Basic Page Content</a></li>
+                            <li><a href="./HTML_Text_Formatting.html">HTML Text Formatting - Bold, Italic, Underline and More</a></li>
+                            <li><a href="./Creating_Links_with_the_a_Tag.html">Creating Links with the &lt;a&gt; Tag - Linking Web Pages</a></li>
+                            <li><a href="./Adding_Images_with_img.html">Adding Images with &lt;img&gt; - Making Web Pages Visual</a></li>
+                            <li><a href="./Lists_in_HTML.html">Lists in HTML - Ordered and Unordered Lists</a></li>
+                            <li><a href="./Creating_Tables.html">Creating Tables - Organizing Data in HTML</a></li>
+                            <li><a href="./HTML_Forms.html">HTML Forms - How I Learned to Collect User Input</a></li>
+                            <li><a href="./Input_Types_and_Form_Elements.html">Input Types and Form Elements - Text, Radio, Checkbox, Button</a></li>
+                            <li><a href="./HTML_Attributes.html">HTML Attributes - What Makes Tags More Powerful</a></li>
+                            <li><a href="./HTML_Semantic_Tags.html">HTML Semantic Tags - Writing Clean and Meaningful Code</a></li>
+                            <li><a href="./HTML_Entities.html">HTML Entities - Displaying Special Characters</a></li>
+                            <li><a href="./Embedding_Videos_and_Audio.html">Embedding Videos and Audio - Making Pages Multimedia</a></li>
+                            <li><a href="./Using_div_and_span.html">Using &lt;div&gt; and &lt;span&gt; - Grouping and Styling Elements</a></li>
+                            <li><a href="./How_I_Learned_to_Comment_My_Code_in_HTML.html">How I Learned to Comment My Code in HTML - Making Code Easy to Read and Maintain</a></li>
+                            <li><a href="./HTML_Meta_Tags.html">HTML Meta Tags – Controlling How My Page Appears in Search Engines</a></li>
+                            <li><a href="./Creating_Navigation_Menus_with_HTML.html">Creating Navigation Menus with HTML - Making Site Easy to Explore</a></li>
+                            <li><a href="./HTML_Best_Practices_I’m_Following_as_a_Beginner.html">HTML Best Practices I’m Following as a Beginner - Simple Rules for Better Web Pages</a></li>
+                            <li><a href="./Building_My_First_Full_HTML_Page.html">Building My First Full HTML Page – What I Learned</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+            <!-- form container -->
+
+
+
+
+            <div id="mlb2-31121348" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-31121348">
+                <div class="ml-form-align-center ">
+                    <div class="ml-form-embedWrapper embedForm">
+
+
+
+
+                        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+
+                            <div class="ml-form-embedContent" style=" ">
+
+                                <h4>Subscribe to switzcodes</h4>
+                                Get updates on HTML, CSS & JavaScript tutorials
+
+                            </div>
+
+                            <form class="ml-block-form"
+                                action="https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/subscribe"
+                                data-code="" method="post" target="_blank">
+                                <div class="ml-form-formContent">
+
+
+
+                                    <div class="ml-form-fieldRow ">
+                                        <div class="ml-field-group ml-field-name">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="name" type="text" class="form-control" data-inputmask=""
+                                                name="fields[name]" placeholder="Enter your fullname"
+                                                autocomplete="given-name">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="ml-form-fieldRow ml-last-item">
+                                        <div
+                                            class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="email" aria-required="true" type="email"
+                                                class="form-control" data-inputmask="" name="fields[email]"
+                                                placeholder="Enter your email" autocomplete="email">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Privacy policy -->
+
+                                <!-- /Privacy policy -->
+
+
+                                <input type="hidden" name="ml-submit" value="1">
+
+                                <div class="ml-form-embedSubmit">
+
+                                    <button type="submit" class="primary">Subscribe</button>
+
+                                    <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                        <div class="ml-form-embedSubmitLoad"></div>
+                                        <span class="sr-only">Loading...</span>
+                                    </button>
+                                </div>
+
+
+                                <input type="hidden" name="anticsrf" value="true">
+                            </form>
+                        </div>
+
+                        <div class="ml-form-successBody row-success" style="display: none">
+
+                            <div class="ml-form-successContent">
+
+                                <h4>Thank you!</h4>
+
+                                <p>You have successfully joined our subscriber list.</p>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer_links">
+                <div class="links_container">
+                    <h3>About switzCodes</h3>
+                    <p>Sharing my journey of learning HTML, CSS and JavaScript one day at a time.</p>
+                </div>
+                <div class="links_container">
+                    <h3>Quick Links</h3>
+                    <p><a href="../../index.html">Home</a></p>
+                    <p><a href="../../quickLinks/privacy_policy/privacy_policy.html">Privacy Policy</a></p>
+                    <p><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a></p>
+                    <p><a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                    </p>
+                    <p><a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a></p>
+                </div>
+                <div class="links_container">
+                    <h3>Follow me</h3>
+                    <p><a href="#">Twitter</a></p>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <p>&copy; 2025 switzCodes. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="../script/hamburgerToggle.js" defer></script>
+    <script src="../script/search_script.js" defer></script>
+
+    <!-- from mailerLite -->
+
+    <script>
+        function ml_webform_success_31121348() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-31121348 .row-success').show();
+            $('.ml-subscribe-form-31121348 .row-form').hide();
+        }
+    </script>
+
+
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/takel")
+    </script>
+</body>
+
+</html>

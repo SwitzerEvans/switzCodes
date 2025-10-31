@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="../../assets/switzcodeslogo.png" type="image/png">
+
+    <!-- ✅ Stylesheet -->
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <div class="body_container">
+        <div class="hamburger-menu">
+            <div class="hamburger-menu-link">
+                <span id="close-hamurger">X</span>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../index.html">Home</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../quickLinks/about/about.html">About</a>
+            </div>
+
+            <div id="hamburger-contact" class="hamburger-menu-link">
+                <a href="../../quickLinks/contact/contact.html">Contact</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </div>
+        </div>
+
+        <header class="nav-search">
+            <div class="fore_container">
+                <h1>switz<span>Codes</span></h1>
+                <div class="head_link">
+                    <a href="../../index.html">Home</a>
+                    <a href="../../quickLinks/about/about.html">About</a>
+                    <a href="../../quickLinks/contact/contact.html">Contact</a>
+                </div>
+
+                <div class="header-icons">
+                    <img src="../../assets/search.png" class="search-icon">
+                    <div class="hamburg_icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="head-icon">
+                    <input type="text" placeholder="search posts..." id="search-input-desktop"
+                        oninput="searchPostsDesktop()">
+                    <div class="search-desktop">
+                        <div id="search-result-desktop"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="search-input-mobile" class="search">
+                <span class="js-close-mobile-search">X</span>
+                <div class="search-container">
+                    <input type="text" placeholder="Search Posts..." id="search_input" oninput="searchPostsMobile()">
+                </div>
+                <div id="search-result"></div>
+            </div>
+        </header>
+
+        <div class="button_container">
+            <nav>
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </nav>
+        </div>
+
+        <main class="main_container">
+            <div class="mainposts_container" id="main-content">
+
+                <section class="postdiv_container">
+                    <img src="../../assets/HTML_Forms.webp"
+                        alt="Banner image for a switzCodes blog post titled ‘HTML Forms – How I Learned to Collect User Input,’ featuring the switzCodes logo in dark blue, white, and green tones with form field icons.">
+                    <h1>📝 HTML Forms – How I Learned to Collect User Input</h1>
+                    <p class="date">📅 August 25, 2025</p>
+                    <p>✍️ By Evans</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <p>Hey friends! 👋</p>
+                    <p>
+                        After learning how to display data with tables, I was curious about something new — how do
+                        websites actually collect information from users?
+                    </p>
+                    <p>
+                        Like those login pages, signup forms, and contact sections. 🤔
+                    </p>
+                    <p>
+                        That’s when I discovered HTML forms. They’re what make websites interactive — allowing users to
+                        type, click, and send data. Let’s dive in! 🚀
+                    </p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>💡 What Is an HTML Form?</h3>
+                    <p>
+                        An HTML form is like a container that holds input elements such as text boxes, buttons,
+                        checkboxes, and more.
+                    </p>
+
+                    <p>Here’s the simplest form example I started with:</p>
+
+                    <div class="code_container">
+                        <pre><code>
+&lt;form&gt;
+  &lt;label for="name">Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+
+  &lt;label for="email">Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;
+
+  &lt;button type="submit">Submit&lt;/button&gt;
+&lt;/form>
+                        </code></pre>
+                    </div>
+
+                    <p>Let's break it down 👇</p>
+                    <ul>
+                        <li>&lt;form&gt; — wraps all your input fields.</li>
+                        <li>&lt;label&gt; — tells users what each input is for.</li>
+                        <li>&lt;input&gt; — the actual field where the user types.</li>
+                        <li>&lt;button&gt; — used to submit the form.</li>
+                    </ul>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>📤 The action and method Attributes</h3>
+                    <p>These two attributes tell the browser what to do when a form is submitted.</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;form action="submit.html" method="post"&gt;
+  &lt;input type="text" name="username"&gt;
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;
+                    </code></pre>
+                    </div>
+
+                    <ul>
+                        <li>action — where the data goes (like another page or server).</li>
+                        <li> method — how the data is sent.
+                            <ul>
+                                <li>GET adds it to the URL (for simple searches).</li>
+                                <li>POST hides it in the background (for logins, signups, etc.).</li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>✍️ Common Input Types</h3>
+                    <p>Forms can collect many types of data. Here are some I practiced with:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;form&gt;
+  &lt;input type="text" placeholder="Your name"&gt;&lt;br&gt;
+  &lt;input type="email" placeholder="Your email"&gt;&lt;br&gt;
+  &lt;input type="password" placeholder="Your password"&gt;&lt;br&gt;
+  &lt;input type="checkbox"> Remember me&lt;br&gt;
+  &lt;input type="radio" name="gender" value="male"&gt; Male
+  &lt;input type="radio" name="gender" value="female"&gt; Female&lt;br&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+                        </code></pre>
+                    </div>
+                    <p>Each input type behaves differently:</p>
+                    <ul>
+                        <li>text → simple one-line input</li>
+                        <li>email → checks for a valid email format</li>
+                        <li>password → hides what you type</li>
+                        <li>checkbox and radio → let users choose options</li>
+                    </ul>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>💬 A Quick Example I Tried</h3>
+                    <p>I created a simple Contact Me form like this:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;h2&gt;Contact Me&lt;/h2&gt;
+&lt;form&gt;
+  &lt;label for="name"&gt;Name:&lt;/label>&lt;br&gt;
+  &lt;input type="text" id="name" name="name" placeholder="Enter your name"&gt;&lt;br>&lt;br&gt;
+
+  &lt;label for="message"&gt;Message:&lt;/label>&lt;br&gt;
+  &lt;textarea id="message" name="message" rows="4" cols="30" placeholder="Your message here..."&gt;&lt;/textarea>&lt;br&gt;&lt;br&gt;
+
+  &lt;button type="submit"&gt;Send Message&lt;/button&gt;
+&lt;/form&gt;
+                        </code></pre>
+                    </div>
+                    <p>And just like that — I had my first interactive HTML page! 😄</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>💡 Some Beginner Tips</h3>
+                    <ul>
+                        <li>Always use <label> for better accessibility.</li>
+                        <li>Give your inputs id and name attributes — they help identify the data.</li>
+                        <li>Use placeholder to guide users on what to type.</li>
+                        <li>Don’t forget a submit button! 😅</li>
+                        <li>You can style forms beautifully later with CSS.</li>
+                    </ul>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🎯 What I Learned</h3>
+                    <p>
+                        Learning forms felt like a big step forward for me. I wasn’t just writing text or adding images
+                        anymore — I was creating real user interaction.
+                    </p>
+                    <p>It’s awesome to know that every signup page, search bar, and comment box starts with just these
+                        simple tags.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>👉 What's Next?</h3>
+                    <p>
+                        In my next post, I’ll be learning about Input Types and Form Elements – Text, Radio, Checkbox,
+                        Button — where I’ll go deeper into the different kinds of input fields available in HTML.
+                    </p>
+                    <p>Catch you in the next one! 🙌</p>
+                    <p>— Evans 💻</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <div class="navigate_container">
+                        <a href="./Creating_Tables.html">← Previous Post</a>
+                        <a href="./Input_Types_and_Form_Elements.html">Next Post →</a>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="mainposts_container">
+                <div class="postdiv_container">
+                    <div class="posts_header">
+                        <h3>Posts</h3>
+                    </div>
+                    <div class="overflow_posts">
+                        <ol>
+                            <li><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">Introduction to
+                                    HTML - My First Step Into Web Development</a></li>
+                            <li><a href="./Understanding_the_HTML_Document_Structure.html">Understanding the HTML
+                                    Document Structure - Building the Foundation of Every Web Page</a></li>
+                            <li><a href="./Headings_and_Paragraphs_Writing_Basic_Page_Content.html">Headings and
+                                    Paragraphs - Writing Basic Page Content</a></li>
+                            <li><a href="./HTML_Text_Formatting.html">HTML Text Formatting - Bold, Italic, Underline and
+                                    More</a></li>
+                            <li><a href="./Creating_Links_with_the_a_Tag.html">Creating Links with the &lt;a&gt; Tag -
+                                    Linking Web Pages</a></li>
+                            <li><a href="./Adding_Images_with_img.html">Adding Images with &lt;img&gt; - Making Web
+                                    Pages Visual</a></li>
+                            <li><a href="./Lists_in_HTML.html">Lists in HTML - Ordered and Unordered Lists</a></li>
+                            <li><a href="./Creating_Tables.html">Creating Tables - Organizing Data in HTML</a></li>
+                            <li><a href="./HTML_Forms.html">HTML Forms - How I Learned to Collect User Input</a></li>
+                            <li><a href="./Input_Types_and_Form_Elements.html">Input Types and Form Elements - Text,
+                                    Radio, Checkbox, Button</a></li>
+                            <li><a href="./HTML_Attributes.html">HTML Attributes - What Makes Tags More Powerful</a>
+                            </li>
+                            <li><a href="./HTML_Semantic_Tags.html">HTML Semantic Tags - Writing Clean and Meaningful
+                                    Code</a></li>
+                            <li><a href="./HTML_Entities.html">HTML Entities - Displaying Special Characters</a></li>
+                            <li><a href="./Embedding_Videos_and_Audio.html">Embedding Videos and Audio - Making Pages
+                                    Multimedia</a></li>
+                            <li><a href="./Using_div_and_span.html">Using &lt;div&gt; and &lt;span&gt; - Grouping and
+                                    Styling Elements</a></li>
+                            <li><a href="./How_I_Learned_to_Comment_My_Code_in_HTML.html">How I Learned to Comment My
+                                    Code in HTML - Making Code Easy to Read and Maintain</a></li>
+                            <li><a href="./HTML_Meta_Tags.html">HTML Meta Tags – Controlling How My Page Appears in Search Engines</a></li>
+                            <li><a href="./Creating_Navigation_Menus_with_HTML.html">Creating Navigation Menus with HTML
+                                    - Making Site Easy to Explore</a></li>
+                            <li><a href="./HTML_Best_Practices_I’m_Following_as_a_Beginner.html">HTML Best Practices I’m
+                                    Following as a Beginner - Simple Rules for Better Web Pages</a></li>
+                            <li><a href="./Building_My_First_Full_HTML_Page.html">Building My First Full HTML Page –
+                                    What I Learned</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- form container -->
+
+
+
+
+            <div id="mlb2-31121348" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-31121348">
+                <div class="ml-form-align-center ">
+                    <div class="ml-form-embedWrapper embedForm">
+
+
+
+
+                        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+
+                            <div class="ml-form-embedContent" style=" ">
+
+                                <h4>Subscribe to switzcodes</h4>
+                                Get updates on HTML, CSS & JavaScript tutorials
+
+                            </div>
+
+                            <form class="ml-block-form"
+                                action="https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/subscribe"
+                                data-code="" method="post" target="_blank">
+                                <div class="ml-form-formContent">
+
+
+
+                                    <div class="ml-form-fieldRow ">
+                                        <div class="ml-field-group ml-field-name">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="name" type="text" class="form-control" data-inputmask=""
+                                                name="fields[name]" placeholder="Enter your fullname"
+                                                autocomplete="given-name">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="ml-form-fieldRow ml-last-item">
+                                        <div
+                                            class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="email" aria-required="true" type="email"
+                                                class="form-control" data-inputmask="" name="fields[email]"
+                                                placeholder="Enter your email" autocomplete="email">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Privacy policy -->
+
+                                <!-- /Privacy policy -->
+
+
+                                <input type="hidden" name="ml-submit" value="1">
+
+                                <div class="ml-form-embedSubmit">
+
+                                    <button type="submit" class="primary">Subscribe</button>
+
+                                    <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                        <div class="ml-form-embedSubmitLoad"></div>
+                                        <span class="sr-only">Loading...</span>
+                                    </button>
+                                </div>
+
+
+                                <input type="hidden" name="anticsrf" value="true">
+                            </form>
+                        </div>
+
+                        <div class="ml-form-successBody row-success" style="display: none">
+
+                            <div class="ml-form-successContent">
+
+                                <h4>Thank you!</h4>
+
+                                <p>You have successfully joined our subscriber list.</p>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer_links">
+                <div class="links_container">
+                    <h3>About switzCodes</h3>
+                    <p>Sharing my journey of learning HTML, CSS and JavaScript one day at a time.</p>
+                </div>
+                <div class="links_container">
+                    <h3>Quick Links</h3>
+                    <p><a href="../../index.html">Home</a></p>
+                    <p><a href="../../quickLinks/privacy_policy/privacy_policy.html">Privacy Policy</a></p>
+                    <p><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a></p>
+                    <p><a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                    </p>
+                    <p><a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a></p>
+                </div>
+                <div class="links_container">
+                    <h3>Follow me</h3>
+                    <p><a href="#">Twitter</a></p>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <p>&copy; 2025 switzCodes. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="../script/hamburgerToggle.js" defer></script>
+    <script src="../script/search_script.js" defer></script>
+
+    <!-- from mailerLite -->
+
+    <script>
+        function ml_webform_success_31121348() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-31121348 .row-success').show();
+            $('.ml-subscribe-form-31121348 .row-form').hide();
+        }
+    </script>
+
+
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/takel")
+    </script>
+</body>
+
+</html>

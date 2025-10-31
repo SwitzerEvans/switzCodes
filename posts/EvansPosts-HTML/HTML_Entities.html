@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="../../assets/switzcodeslogo.png" type="image/png">
+
+    <!-- ✅ Stylesheet -->
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <div class="body_container">
+        <div class="hamburger-menu">
+            <div class="hamburger-menu-link">
+                <span id="close-hamurger">X</span>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../index.html">Home</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../../quickLinks/about/about.html">About</a>
+            </div>
+
+            <div id="hamburger-contact" class="hamburger-menu-link">
+                <a href="../../quickLinks/contact/contact.html">Contact</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+            </div>
+
+            <div class="hamburger-menu-link">
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </div>
+        </div>
+
+        <header class="nav-search">
+            <div class="fore_container">
+                <h1>switz<span>Codes</span></h1>
+                <div class="head_link">
+                    <a href="../../index.html">Home</a>
+                    <a href="../../quickLinks/about/about.html">About</a>
+                    <a href="../../quickLinks/contact/contact.html">Contact</a>
+                </div>
+
+                <div class="header-icons">
+                    <img src="../../assets/search.png" class="search-icon">
+                    <div class="hamburg_icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="head-icon">
+                    <input type="text" placeholder="search posts..." id="search-input-desktop"
+                        oninput="searchPostsDesktop()">
+                    <div class="search-desktop">
+                        <div id="search-result-desktop"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="search-input-mobile" class="search">
+                <span class="js-close-mobile-search">X</span>
+                <div class="search-container">
+                    <input type="text" placeholder="Search Posts..." id="search_input" oninput="searchPostsMobile()">
+                </div>
+                <div id="search-result"></div>
+            </div>
+        </header>
+
+        <div class="button_container">
+            <nav>
+                <a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a>
+                <a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                <a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a>
+            </nav>
+        </div>
+
+        <main class="main_container">
+            <div class="mainposts_container" id="main-content">
+
+                <section class="postdiv_container">
+                    <img src="../../assets/HTML_Entities.webp" 
+     alt="Banner image for a switzCodes blog post titled ‘HTML Entities – Displaying Special Characters,’ featuring the switzCodes logo with a dark blue background and character symbols in white and green.">
+                    <h1>📄 HTML Entities – Displaying Special Characters</h1>
+                    <p class="date">📅 September 29, 2025</p>
+                    <p>✍️ By Evans</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <p>Hey there, friends! 👋</p>
+                    <p>
+                        So, one day I tried to write a simple sentence in my HTML file that said:
+                    </p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;p&gt;5 &lt; 10 and 10 &gt; 5&lt;/p&gt;
+                        </code></pre>
+                    </div>
+                    <p>…and boom 💥 — everything after the &lt; disappeared!</p>
+                    <p>That's when I learned about something called HTML Entities — a way to show special symbols
+                        like &lt;, &gt;, &copy;, or even emojis 😄 without confusing the browser.
+                    </p>
+                    <p>Let’s talk about how they work.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>💡 What Are HTML Entities?</h3>
+                    <p>
+                        HTML entities are special codes that tell the browser to display characters that would otherwise
+                        be treated as part of the HTML syntax.
+                    </p>
+
+                    <p>
+                        They usually start with an ampersand (&) and end with a semicolon (;).
+                    </p>
+
+                    <p>Example:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;p&gt;5 &amp;lt; 10 and 10 &amp;gt; 5&lt;/p&gt;
+                        </code></pre>
+                    </div>
+                    <p>This will show correctly as:</p>
+                    <p><strong>5 &lt; 10 and 10 &gt; 5</strong></p>
+                    <p>Pretty neat, right?</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧩 Why We Need Them</h3>
+                    <p>The problem is, characters like &lt;, &gt;, &amp;, and &quot; have special meanings in HTML.
+                        If you type them directly, the browser might think you’re starting or ending a tag.</p>
+                    <p>HTML entities help you display those symbols as plain text, not code.</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🔠 Common HTML Entities I Use</h3>
+                    <p>Here are some of the most common ones I’ve learned:</p>
+                    <div class="table_container">
+                        <table>
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Entity Name</th>
+                                <th>Example Code</th>
+                                <th>Result</th>
+                            </tr>
+
+                            <tr>
+                                <td>&lt;</td>
+                                <td>&amp;lt;</td>
+                                <td>&amp;lt;</td>
+                                <td>&lt;</td>
+                            </tr>
+
+                            <tr>
+                                <td>&gt;</td>
+                                <td>&amp;gt;</td>
+                                <td>&amp;gt;</td>
+                                <td>&gt;</td>
+                            </tr>
+
+                            <tr>
+                                <td>&amp;</td>
+                                <td>&amp;amp;</td>
+                                <td>&amp;amp;</td>
+                                <td>&amp;</td>
+                            </tr>
+
+                            <tr>
+                                <td>&quot;</td>
+                                <td>&amp;quot;</td>
+                                <td>&amp;quot;</td>
+                                <td>&quot;</td>
+                            </tr>
+
+                            <tr>
+                                <td>&apos;</td>
+                                <td>&amp;apos;</td>
+                                <td>&amp;apos;</td>
+                                <td>&apos;</td>
+                            </tr>
+
+                            <tr>
+                                <td>&copy;</td>
+                                <td>&amp;copy;</td>
+                                <td>&amp;copy;</td>
+                                <td>&copy;</td>
+                            </tr>
+
+                            <tr>
+                                <td>&reg;</td>
+                                <td>&amp;reg;</td>
+                                <td>&amp;reg;</td>
+                                <td>&reg;</td>
+                            </tr>
+
+                            <tr>
+                                <td>&rarr;</td>
+                                <td>&amp;rarr;</td>
+                                <td>&amp;rarr;</td>
+                                <td>&rarr;</td>
+                            </tr>
+
+                            <tr>
+                                <td>&larr;</td>
+                                <td>&amp;larr;</td>
+                                <td>&amp;larr;</td>
+                                <td>&larr;</td>
+                            </tr>
+
+                            <tr>
+                                <td>&#8358;</td>
+                                <td>&amp;#8358;</td>
+                                <td>&amp;#8358;</td>
+                                <td>&#8358;</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧠 Numeric Entities</h3>
+                    <p>Apart from named entities like &lt; or &copy;, you can also use numeric entities that start with
+                        &# followed by a number.</p>
+                    <p>For example:</p>
+                    <div class="code_container">
+                        <pre><code>
+&lt;p&gt;Smiley: &amp;#128512;&lt;/p&gt;
+                        </code></pre>
+                    </div>
+                    <p>This will display 😀</p>
+                    <p>So yes — you can even show emojis with HTML entities! 😎</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🛠️ When to Use Them</h3>
+                    <ul>
+                        <li>When you want to display code snippets like &lt;html&gt; or &lt;body&gt.</li>
+                        <li>When your page includes currency symbols or special punctuation.</li>
+                        <li>When characters might break the HTML syntax.</li>
+                    </ul>
+
+                </section>
+                <section class="postdiv_container">
+                    <h3>🎯 What I Learned</h3>
+                    <p>At first, HTML entities looked strange — but now I see them as tiny secret codes that keep my
+                        pages from breaking.</p>
+                    <p>They make your HTML cleaner, safer, and more professional, especially when displaying code or
+                        special symbols.</p>
+                </section>
+                <secrion class="postdiv_container">
+                    <h3>👉 What’s Next?</h3>
+                    <p>Next up, I’ll be exploring Embedding Videos and Audio – Making Pages Multimedia,
+                        where I’ll learn how to add music and videos right inside a webpage.
+                    </p>
+                    <p>Thanks for reading — and if you’ve ever wondered why your &lt; or &gt; disappear, now you know the trick! 😉</p>
+                    <p>— Evans 💻</p>
+                </secrion>
+
+                <section class="postdiv_container">
+                    <div class="navigate_container">
+                        <a href="./HTML_Semantic_Tags.html">← Previous Post</a>
+                        <a href="./Embedding_Videos_and_Audio.html">Next Post →</a>
+                    </div>
+                </section>
+
+
+            </div>
+
+            <div class="mainposts_container">
+                <div class="postdiv_container">
+                    <div class="posts_header">
+                        <h3>Posts</h3>
+                    </div>
+                    <div class="overflow_posts">
+                       <ol>
+                            <li><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">Introduction to
+                                    HTML - My First Step Into Web Development</a></li>
+                            <li><a href="./Understanding_the_HTML_Document_Structure.html">Understanding the HTML
+                                    Document Structure - Building the Foundation of Every Web Page</a></li>
+                            <li><a href="./Headings_and_Paragraphs_Writing_Basic_Page_Content.html">Headings and Paragraphs - Writing Basic Page Content</a></li>
+                            <li><a href="./HTML_Text_Formatting.html">HTML Text Formatting - Bold, Italic, Underline and More</a></li>
+                            <li><a href="./Creating_Links_with_the_a_Tag.html">Creating Links with the &lt;a&gt; Tag - Linking Web Pages</a></li>
+                            <li><a href="./Adding_Images_with_img.html">Adding Images with &lt;img&gt; - Making Web Pages Visual</a></li>
+                            <li><a href="./Lists_in_HTML.html">Lists in HTML - Ordered and Unordered Lists</a></li>
+                            <li><a href="./Creating_Tables.html">Creating Tables - Organizing Data in HTML</a></li>
+                            <li><a href="./HTML_Forms.html">HTML Forms - How I Learned to Collect User Input</a></li>
+                            <li><a href="./Input_Types_and_Form_Elements.html">Input Types and Form Elements - Text, Radio, Checkbox, Button</a></li>
+                            <li><a href="./HTML_Attributes.html">HTML Attributes - What Makes Tags More Powerful</a></li>
+                            <li><a href="./HTML_Semantic_Tags.html">HTML Semantic Tags - Writing Clean and Meaningful Code</a></li>
+                            <li><a href="./HTML_Entities.html">HTML Entities - Displaying Special Characters</a></li>
+                            <li><a href="./Embedding_Videos_and_Audio.html">Embedding Videos and Audio - Making Pages Multimedia</a></li>
+                            <li><a href="./Using_div_and_span.html">Using &lt;div&gt; and &lt;span&gt; - Grouping and Styling Elements</a></li>
+                            <li><a href="./How_I_Learned_to_Comment_My_Code_in_HTML.html">How I Learned to Comment My Code in HTML - Making Code Easy to Read and Maintain</a></li>
+                            <li><a href="./HTML_Meta_Tags.html">HTML Meta Tags – Controlling How My Page Appears in Search Engines</a></li>
+                            <li><a href="./Creating_Navigation_Menus_with_HTML.html">Creating Navigation Menus with HTML - Making Site Easy to Explore</a></li>
+                            <li><a href="./HTML_Best_Practices_I’m_Following_as_a_Beginner.html">HTML Best Practices I’m Following as a Beginner - Simple Rules for Better Web Pages</a></li>
+                            <li><a href="./Building_My_First_Full_HTML_Page.html">Building My First Full HTML Page – What I Learned</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+            <!-- form container -->
+
+
+
+
+            <div id="mlb2-31121348" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-31121348">
+                <div class="ml-form-align-center ">
+                    <div class="ml-form-embedWrapper embedForm">
+
+
+
+
+                        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+
+                            <div class="ml-form-embedContent" style=" ">
+
+                                <h4>Subscribe to switzcodes</h4>
+                                Get updates on HTML, CSS & JavaScript tutorials
+
+                            </div>
+
+                            <form class="ml-block-form"
+                                action="https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/subscribe"
+                                data-code="" method="post" target="_blank">
+                                <div class="ml-form-formContent">
+
+
+
+                                    <div class="ml-form-fieldRow ">
+                                        <div class="ml-field-group ml-field-name">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="name" type="text" class="form-control" data-inputmask=""
+                                                name="fields[name]" placeholder="Enter your fullname"
+                                                autocomplete="given-name">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="ml-form-fieldRow ml-last-item">
+                                        <div
+                                            class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+
+
+
+
+                                            <!-- input -->
+                                            <input aria-label="email" aria-required="true" type="email"
+                                                class="form-control" data-inputmask="" name="fields[email]"
+                                                placeholder="Enter your email" autocomplete="email">
+                                            <!-- /input -->
+
+                                            <!-- textarea -->
+
+                                            <!-- /textarea -->
+
+                                            <!-- select -->
+
+                                            <!-- /select -->
+
+                                            <!-- checkboxes -->
+
+                                            <!-- /checkboxes -->
+
+                                            <!-- radio -->
+
+                                            <!-- /radio -->
+
+                                            <!-- countries -->
+
+                                            <!-- /countries -->
+
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Privacy policy -->
+
+                                <!-- /Privacy policy -->
+
+
+                                <input type="hidden" name="ml-submit" value="1">
+
+                                <div class="ml-form-embedSubmit">
+
+                                    <button type="submit" class="primary">Subscribe</button>
+
+                                    <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                        <div class="ml-form-embedSubmitLoad"></div>
+                                        <span class="sr-only">Loading...</span>
+                                    </button>
+                                </div>
+
+
+                                <input type="hidden" name="anticsrf" value="true">
+                            </form>
+                        </div>
+
+                        <div class="ml-form-successBody row-success" style="display: none">
+
+                            <div class="ml-form-successContent">
+
+                                <h4>Thank you!</h4>
+
+                                <p>You have successfully joined our subscriber list.</p>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer_links">
+                <div class="links_container">
+                    <h3>About switzCodes</h3>
+                    <p>Sharing my journey of learning HTML, CSS and JavaScript one day at a time.</p>
+                </div>
+                <div class="links_container">
+                    <h3>Quick Links</h3>
+                    <p><a href="../../index.html">Home</a></p>
+                    <p><a href="../../quickLinks/privacy_policy/privacy_policy.html">Privacy Policy</a></p>
+                    <p><a href="./Introduction_to_HTML_My_First_Step_Into_Web_Development.html">HTML</a></p>
+                    <p><a href="../EvansPosts-CSS/Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">CSS</a>
+                    </p>
+                    <p><a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a></p>
+                </div>
+                <div class="links_container">
+                    <h3>Follow me</h3>
+                    <p><a href="#">Twitter</a></p>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <p>&copy; 2025 switzCodes. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="../script/hamburgerToggle.js" defer></script>
+    <script src="../script/search_script.js" defer></script>
+
+    <!-- from mailerLite -->
+
+    <script>
+        function ml_webform_success_31121348() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-31121348 .row-success').show();
+            $('.ml-subscribe-form-31121348 .row-form').hide();
+        }
+    </script>
+
+
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/1808601/forms/166112454753912231/takel")
+    </script>
+</body>
+
+</html>
