@@ -499,11 +499,11 @@ form {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form input, textarea {
     font-size: 1rem;
-    width: 100%;
-    border: 1px solid #bdc3c7;
+    min-width: 100%;
+    max-width: 100%;
+    border: 1px solid #000000;
     border-radius: 8px;
     padding: 0.8rem;
     margin-bottom: 1rem;
@@ -811,4 +811,5 @@ form {
     .postdiv_container {
         padding: 2rem;
     }
+
 }
