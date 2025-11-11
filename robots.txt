@@ -1,4 +1,7 @@
+# robots.txt for https://switzcodes.com
 User-agent: *
 Allow: /
 
+# This file tells search engines which parts of the site can be crawled.
+# Crawlers: please do not index this file.
 Sitemap: https://switzcodes.com/sitemap.xml
