@@ -5,11 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ✅ Favicon -->
+    <!-- Title -->
+    <title>Colors in CSS - From Names to Hex, RGB, and HSL | SwitzCodes</title>
+    <meta name="title" content="Colors in CSS - From Names to Hex, RGB, and HSL | SwitzCodes">
+
+    <!-- SEO Meta -->
+    <meta name="description"
+        content="Learn the different ways to use colors in CSS — from color names to hex codes, RGB, and HSL values.">
+    <meta name="keywords"
+        content="CSS colors, color hex, RGB, HSL, SwitzCodes, Evans, CSS color tutorial, web design for beginners">
+    <meta name="author" content="Evans">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Colors in CSS – SwitzCodes">
+    <meta property="og:description"
+        content="Evans explores CSS color formats like names, hex codes, RGB, and HSL for creative web design.">
+    <meta property="og:image" content="https://switzcodes.com/assets/switzcodeslogo.png">
+    <meta property="og:url" content="https://switzcodes.com/posts/EvansPosts-CSS/Colors_in_CSS.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="SwitzCodes">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Colors in CSS – SwitzCodes">
+    <meta name="twitter:description"
+        content="Learn to use color names, hex, RGB, and HSL in CSS to add style and life to your web pages.">
+    <meta name="twitter:image" content="https://switzcodes.com/assets/switzcodeslogo.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://switzcodes.com/posts/EvansPosts-CSS/Colors_in_CSS.html">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0b0d1a">
+
+    <!-- Favicon -->
     <link rel="icon" href="../../assets/switzcodeslogo.png" type="image/png">
 
-    <!-- ✅ Stylesheet -->
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="../style/style.css">
+
+
+    <!-- Google AdSense Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7874903433935122"
+        crossorigin="anonymous"></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SRWH5JCPX8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SRWH5JCPX8', {
+            'anonymize_ip': true
+        });
+    </script>
 </head>
 
 <body>
@@ -92,244 +143,196 @@
             <div class="mainposts_container" id="main-content">
 
                 <section class="postdiv_container">
-                    <!-- <img src="../../assets/#"
-                    alt="#"> -->
-                    <h1>🎨 Ways to Add CSS – Inline, Internal, and External Stylesheets</h1>
-                    <p class="date">📅 October 6, 2025</p>
+                    <img src="../../assets/Colors_in_CSS.webp"
+                        alt="Banner image for a switzCodes blog post titled ‘Colors in CSS – From Names to Hex, RGB, and HSL,’ featuring the switzCodes logo in dark blue, white, and green with code-themed design elements.">
+                    <h1>🎨 Colors in CSS – From Names to Hex, RGB, and HSL</h1>
+                    <p class="date">📅 November 12, 2025</p>
                     <p>✍️ By Evans</p>
                 </section>
 
                 <section class="postdiv_container">
-                    <p>Hey there, welcome back to switzCodes! 👋</p>
+                    <p>Hey again! 👋</p>
                     <p>
-                        After understanding how CSS works — with selectors and properties — I started wondering:
+                        After spending weeks looking at plain black text on a white background, I finally entered the
+                        colorful world of CSS — and wow, it completely changed how my web pages feel.
                     </p>
                     <p>
-                        💭<em> “Where exactly do I put this CSS code?”</em>
+                        Learning how to add color was like going from sketching with a pencil ✏️ to painting with an
+                        entire palette 🎨. I quickly discovered that in CSS, there’s more than one way
+                        to describe a color — and each gives you a different level of control, accuracy, and creativity.
                     </p>
-                    <p>
-                        That’s when I discovered that there are three main ways to add CSS to a webpage:
-                    <ol>
-                        <li>Inline</li>
-                        <li>Internal</li>
-                        <li>External</li>
-                    </ol>
-                    </p>
-
-                    <p>
-                        Each method works, but they serve different purposes. Let’s explore them one by one — with
-                        examples, pros, and cons — so you can choose wisely when styling your own site.
+                    <p>Let’s explore the four main ways I learned to add color: <strong>names</strong>,
+                        <strong>HEX</strong>, <strong>RGB</strong>, and <strong>HSL</strong>.
                     </p>
                 </section>
 
                 <section class="postdiv_container">
-                    <h3>🧩 Inline CSS – The Quickest Way to Style an Element</h3>
+                    <h3>🌈 Color Names – The Easiest Start</h3>
                     <p>
-                        Inline CSS means you add the style <em>directly</em> to an HTML tag using the style attribute.
+                        Like every beginner, I started with the simplest approach: color names.
                     </p>
                     <p>
-                        Example:
+                        You can literally write:
                     </p>
                     <div class="code_container">
                         <pre><code>
-&lt;p style="color: blue; font-size: 20px;"&gt;This text is blue and larger!&lt;/p&gt;
+h1 {
+  color: red;
+}
                         </code></pre>
                     </div>
-                    <p>The browser reads that and applies the styles immediately to just that one element.</p>
-                    <h4>✅ Advantages:</h4>
-                    <ul>
-                        <li>Great for quick tests or single-use styling.</li>
-                        <li>No need for a separate file.</li>
-                        <li>You see instant results.</li>
-                    </ul>
+                    <p>And boom — your heading turns red. 🔴</p>
+                    <p>CSS comes with over 140 predefined color names, from aqua and chocolate to lavender and
+                        lightcoral.
+                        These are great for quick experiments or small projects.</p>
 
-                    <h4>❌ Disadvantages:</h4>
-                    <ul>
-                        <li>Clutters your HTML.</li>
-                        <li>Hard to reuse — you’d have to repeat styles on every element.</li>
-                        <li>Difficult to maintain on large pages.</li>
-                    </ul>
-                    <p>
-                        <strong>💡 When I first tried it</strong>, I thought it was super convenient… until my page got
-                        messy and I had 20 different
-                    <p> tags each with their own styles.
-                        That’s when I realized — inline CSS is okay for learning, but not for real projects.
+                    <h4>What I liked:</h4>
+                    <p>It’s fast, readable, and beginner-friendly.
+
                     </p>
+                    <h4>❌ Downside:</h4>
+                    <p>You can’t create exact shades or custom tones — you’re limited to the built-in names.</p>
+                    <p>When I wanted a specific green or subtle gray, I realized I needed something more powerful...</p>
                 </section>
 
                 <section class="postdiv_container">
-                    <h3>🏠 Internal CSS – Styling in the Same File</h3>
-
-                    <p>Internal CSS means writing your CSS in a &lt;style&gt; block inside the &lt;head&gt; section of
-                        your HTML file.</p>
+                    <h3>💎 HEX Values – Perfect for Precision</h3>
+                    <p>That’s when I discovered HEX codes, short for “hexadecimal.”</p>
+                    <p>They let you define colors with six characters representing red, green, and blue values — like
+                        this:</p>
 
                     <div class="code_container">
                         <pre><code>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;title&gt;My Styled Page&lt;/title&gt;
-  &lt;style&gt;
-    body {
-      background-color: #f3f4f6;
-      font-family: Arial, sans-serif;
-    }
-    h1 {
-      color: darkslateblue;
-    }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Welcome to switzCodes!&lt;/h1&gt;
-  &lt;p&gt;This page uses internal CSS.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-                        </code></pre>
+p {
+  color: #3498db;
+}
+                            </code></pre>
                     </div>
-                    <p>The styles here apply only to this single HTML file.</p>
-                    <h4>✅ Advantages:</h4>
-                    <ul>
-                        <li>Keeps everything in one file.</li>
-                        <li>Easier to manage than inline CSS.</li>
-                        <li>Great for small projects or testing ideas.</li>
-                    </ul>
-                    <h4>❌ Disadvantages:</h4>
-                    <ul>
-                        <li>Doesn’t scale well for multiple pages.</li>
-                        <li>You can’t reuse the same styles across different files.</li>
-                    </ul>
-                    <p>
-                        When I built my first few practice pages, internal CSS felt perfect — until I made
-                        five pages that all needed the same background color and font. I had to update each page one by
-                        one 😩.
-                    </p>
+                    <p>Here, #3498db is a bright blue often used in modern UI design.</p>
+                    <p>Each pair of characters (34, 98, db) defines how much red, green, and blue to mix — from 00
+                        (none) to FF (full intensity).</p>
+                    <h4 What I liked:</h4>
+                    <p>It’s professional and consistent — great for branding or theming.</p>
+
+                    <h4>❌ Downside:</h4>
+                    <p>It’s not always easy to visualize what #ff6347 means until you see it rendered.</p>
                 </section>
 
                 <section class="postdiv_container">
-                    <h3>🌍 External CSS – The Best and Most Professional Way</h3>
-                    <p>This is the real deal.</p>
-                    <p>External CSS means you put your styles in a separate .css file and link it to your HTML using the
-                        &lt;link&gt; tag.</p>
-                    <p>Example folder structure:</p>
+                    <h3>🌈 RGB Values – Mixing Light Like a Pro</h3>
+                    <p>
+                        RGB stands for <strong>Red, Green, Blue</strong> — the primary colors of light.
+                    </p>
+                    <p>It works by mixing these three values (from 0 to 255) to form any color imaginable.</p>
+                    <p>Example:</p>
 
-                    <div class="code_container">
-                        <pre><code>
-project/
- ├── index.html
- ├── about.html
- └── style.css
-                        </code></pre>
-                    </div>
-                    <p>Your HTML:</p>
-                    <div class="code_container">
-                        <pre><code>
-&lt;head&gt;
-  &lt;link rel="stylesheet" href="style.css"&gt;
-&lt;/head&gt;
-                        </code></pre>
-                    </div>
-                    <p>Your CSS (style.css):</p>
                     <div class="code_container">
                         <pre><code>
 body {
-  background-color: white;
-  color: #333;
-  font-family: "Poppins", sans-serif;
-}
-
-h1 {
-  color: #007bff;
-  text-align: center;
+  background-color: rgb(255, 99, 71);
 }
                         </code></pre>
                     </div>
-                    <p>Now every HTML file that links to this CSS file shares the same styling. If you change one line
-                        in style.css, every page updates automatically. 🎉</p>
+                    <p>This gives a tomato red color 🍅 — which, fun fact, matches the named color tomato</p>
+                    <p>You can also make colors semi-transparent using rgba() (the “a” stands for alpha transparency):
+                    </p>
 
-                    <h4>✅ Advantages:</h4>
-                    <ul>
-                        <li>Clean and professional.</li>
-                        <li>Makes your site faster to load and easier to maintain.</li>
-                        <li>Perfect for multi-page websites (like switzCodes).</li>
-                        <li>Encourages reusability and good project structure.</li>
-                    </ul>
-
-                    <h4>❌ Disadvantages:</h4>
-                    <ul>
-                        <li>Slightly more setup (creating and linking files).</li>
-                        <li>Needs an internet connection if the CSS file is hosted externally.</li>
-                    </ul>
-                </section>
-
-                <section class="postdiv_container">
-                    <h3>🔍 Comparison Table</h3>
-                    <div class="table_container">
-                        <table>
-                            <tr>
-                                <th>Method</th>
-                                <th>Location</th>
-                                <th>Best For</th>
-                                <th>Reusability</th>
-                                <th>Maintenance</th>
-                            </tr>
-                            <tr>
-                                <td>Inline</td>
-                                <td>Inside element</td>
-                                <td>Tiny tweaks</td>
-                                <td>❌ None</td>
-                                <td>❌ Hard</td>
-                            </tr>
-                            <tr>
-                                <td>Internal</td>
-                                <td>In the &lt;head&gt; tag</td>
-                                <td>One-page sites</td>
-                                <td>⚠️ Limited</td>
-                                <td>⚠️ Medium</td>
-                            </tr>
-                            <tr>
-                                <td>External</td>
-                                <td>Separate .css file</td>
-                                <td>Large projects</td>
-                                <td>✅ Excellent</td>
-                                <td>✅ Easy</td>
-                            </tr>
-                        </table>
+                    <div class="code_container">
+                        <pre><code>
+div {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+                        </code></pre>
                     </div>
+                    <p>This gives a dark overlay effect — perfect for hero sections or image backgrounds.</p>
+                    <h4 What I liked:</h4>
+                    <p>You can control transparency and make smoother design effects.</p>
+
+                    <h4>❌ Downside:</h4>
+                    <p>Typing long RGB values can feel repetitive if you use them often.</p>
                 </section>
 
                 <section class="postdiv_container">
-                    <h3>🧠 My Experience</h3>
+                    <h3>🎨 HSL – Colors That Make Sense to Humans</h3>
                     <p>
-                        When I started building switzCodes, I first used internal CSS because it was fast.
-                        But as I added more pages for HTML, CSS, and soon JavaScript, I realized I needed a single style
-                        file to keep everything consistent.
+                        When I first heard of HSL, I thought it sounded complicated — until I used it!
                     </p>
+                    <p>HSL stands for Hue, Saturation, and Lightness — which describe color in a way that’s more <em>visual</em> and intuitive.</p>
+                   
+                    <div class="code_container">
+                        <pre><code>
+h2 {
+  color: hsl(200, 70%, 50%);
+}
+                        </code></pre>
+                    </div>
+                    <p>Here’s how it breaks down:</p>
+                    <ul>
+                        <li><strong>Hue (200)</strong> → The actual color on the color wheel (0 = red, 120 = green, 240 = blue).</li>
+                        <li><strong>Saturation (70%)</strong> → How intense the color is.</li>
+                        <li><strong>Lightness (50%)</strong> → How light or dark it appears.</li>
+                    </ul>
                     <p>
-                        That’s when I switched to external CSS, and it changed everything.
-                        Suddenly, updating one color or font updated my entire website. It made my code neater, my site
-                        faster, and my workflow smoother.
+                        💡 I love using HSL because it’s easy to make variations — for example, darkening a button by lowering lightness or creating a pastel by reducing saturation.
                     </p>
+
+                    <h4> What I liked:</h4>
+                    <p>It’s easy to understand and perfect for adjusting shades quickly.</p>
+
+                    <h4>❌ Downside:</h4>
+                    <p>It’s not as common in old tutorials, so you might not see it used everywhere (but it’s modern and awesome!).</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🎯 My Favorite Color Trick – Using Variables</h3>
+                    <p>Once I started working with multiple colors, I learned about CSS variables — a game changer!</p>
+                    <p>You can define a color once and reuse it everywhere:</p>
+
+                    <div class="code_container">
+                        <pre><code>
+:root {
+  --primary-color: #2ecc71;
+  --secondary-color: #27ae60;
+}
+
+button {
+  background-color: var(--primary-color);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+                        </code></pre>
+                    </div>
+                    <p>Now, if I ever want to change my theme, I just update one line — and the entire site updates instantly! 💚</p>
+                </section>
+
+                <section class="postdiv_container">
+                    <h3>🧠 Common Mistakes I Made</h3>
+                    <ul>
+                        <li>❌ Forgetting the # before HEX values (color: ff0000; doesn’t work).</li>
+                        <li>❌ Mixing up RGB values (like putting 300 — which is out of range).</li>
+                        <li>❌ Confusing HSL percentages — thinking 50 meant half brightness, not 50%.</li>
+                    </ul>
+                    <p>Each mistake helped me understand how colors are calculated and displayed.</p>
                 </section>
 
                 <section class="postdiv_container">
                     <h3>🎯 Final Thoughts</h3>
                     <p>
-                        Understanding the three ways to add CSS is a major step in your web design journey.
-                        Inline is quick, internal is decent for small pages, but external CSS is what professional
-                        developers use every day.
+                        Learning how CSS handles color opened my eyes to how designers think. It’s not just about making 
+                        something “look nice” — it’s about creating emotion, contrast, and readability.
                     </p>
-                        <p>Now that I’ve mastered how to include CSS in my pages, I’m ready to explore selectors — the real key to targeting elements efficiently.</p>
-                    <p>
-                        Thanks for reading!Catch you in the next post,
-                    </p>
-                    <p>— Evans 💻</p>
+                    <p>Whether I’m choosing a soft background for calmness or a bold accent for energy, colors now feel like one of my most creative tools as a web developer.</p>
+                    <p>Next up, I’ll be exploring styling text with fonts, sizes, and line spacing — because colors alone can’t make a page beautiful unless the text matches the vibe. 😄</p>
+                    <p>Thanks for reading,</p>
+                    <p>— Evans 🌈💻</p>
                 </section>
 
                 <section class="postdiv_container">
                     <div class="navigate_container">
-                        <a href="#">← Previous Post</a>
-                        <a href="./CSS_Selectors.html">Next Post →</a>
+                        <a href="./CSS_Selectors.html">← Previous Post</a>
+                        <!-- <a href="./Ways_to_Add_CSS.html">Next Post →</a> -->
                     </div>
                 </section>
 
@@ -342,31 +345,47 @@ h1 {
                         <h3>Posts</h3>
                     </div>
                     <div class="overflow_posts">
-                       <ol>
-                            <li><a href="./Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">Introduction to CSS – My First Step Into Styling Web Pages</a></li>
-                            <li><a href="./Understanding_How_CSS_Works.html">Understanding How CSS Works – From Selectors to Properties</a></li>
-                            <li><a href="./Ways_to_Add_CSS.html">Ways to Add CSS – Inline, Internal, and External Stylesheets</a></li>
+                        <ol>
+                            <li><a href="./Introduction_to_CSS_My_First_Step_Into_Styling_Web_Pages.html">Introduction
+                                    to CSS – My First Step Into Styling Web Pages</a></li>
+                            <li><a href="./Understanding_How_CSS_Works.html">Understanding How CSS Works – From
+                                    Selectors to Properties</a></li>
+                            <li><a href="./Ways_to_Add_CSS.html">Ways to Add CSS – Inline, Internal, and External
+                                    Stylesheets</a></li>
                             <li><a href="./CSS_Selectors.html">CSS Selectors – Targeting the Right Elements</a></li>
-                            <li><a href="./Colors_in_CSS.html">Colors in CSS – From Names to Hex, RGB, and HSL</a></li>
-                            <li><a href="./Styling_Text.html">Styling Text – Fonts, Sizes, and Line Spacing</a></li>
-                            <li><a href="./CSS_Box_Model.html">CSS Box Model – Margin, Border, Padding, and Content</a></li>
-                            <li><a href="./Backgrounds_in_CSS.html">Backgrounds in CSS – Colors, Gradients, and Images</a></li>
-                            <li><a href="./Styling_Links.html">Styling Links – Changing Colors, Hover Effects, and More</a></li>
-                            <li><a href="./Working_with_Lists_in_CSS.html">Working with Lists in CSS – Bullets, Numbers, and Custom Styles</a></li>
+                            <!-- <li><a href="./Colors_in_CSS.html">Colors in CSS – From Names to Hex, RGB, and HSL</a></li> -->
+                            <!-- <li><a href="./Styling_Text.html">Styling Text – Fonts, Sizes, and Line Spacing</a></li>
+                            <li><a href="./CSS_Box_Model.html">CSS Box Model – Margin, Border, Padding, and Content</a>
+                            </li>
+                            <li><a href="./Backgrounds_in_CSS.html">Backgrounds in CSS – Colors, Gradients, and
+                                    Images</a></li>
+                            <li><a href="./Styling_Links.html">Styling Links – Changing Colors, Hover Effects, and
+                                    More</a></li>
+                            <li><a href="./Working_with_Lists_in_CSS.html">Working with Lists in CSS – Bullets, Numbers,
+                                    and Custom Styles</a></li>
                             <li><a href="./Styling_Tables.html">Styling Tables – Making Data Look Good</a></li>
-                            <li><a href="./CSS_Display_and_Visibility.html">CSS Display and Visibility – Block, Inline, Inline-Block, and None</a></li>
-                            <li><a href="./Positioning_in_CSS.html">Positioning in CSS – Static, Relative, Absolute, and Fixed</a></li>
+                            <li><a href="./CSS_Display_and_Visibility.html">CSS Display and Visibility – Block, Inline,
+                                    Inline-Block, and None</a></li>
+                            <li><a href="./Positioning_in_CSS.html">Positioning in CSS – Static, Relative, Absolute, and
+                                    Fixed</a></li>
                             <li><a href="./Flexbox.html">Flexbox – How I Learned to Arrange Elements Easily</a></li>
                             <li><a href="./CSS_Grid.html">CSS Grid – Creating Complex Layouts with Ease</a></li>
-                            <li><a href="./Styling_Forms.html">Styling Forms – Inputs, Buttons, and Select Fields</a></li>
-                            <li><a href="./CSS_Pseudo_classes_and_Pseudo_elements.html">CSS Pseudo-classes and Pseudo-elements – Adding Extra Style Without Extra HTML</a></li>
-                            <li><a href="./CSS_Transitions.html">CSS Transitions – Making Smooth Hover and Click Effects</a></li>
+                            <li><a href="./Styling_Forms.html">Styling Forms – Inputs, Buttons, and Select Fields</a>
+                            </li>
+                            <li><a href="./CSS_Pseudo_classes_and_Pseudo_elements.html">CSS Pseudo-classes and
+                                    Pseudo-elements – Adding Extra Style Without Extra HTML</a></li>
+                            <li><a href="./CSS_Transitions.html">CSS Transitions – Making Smooth Hover and Click
+                                    Effects</a></li>
                             <li><a href="./CSS_Animations.html">CSS Animations – Bringing Elements to Life</a></li>
-                            <li><a href="./Responsive_Design.html">Responsive Design – Making My Pages Look Good on Any Device</a></li>
-                            <li><a href="./CSS_Media_Queries.html">CSS Media Queries – Styling Based on Screen Size</a></li>
+                            <li><a href="./Responsive_Design.html">Responsive Design – Making My Pages Look Good on Any
+                                    Device</a></li>
+                            <li><a href="./CSS_Media_Queries.html">CSS Media Queries – Styling Based on Screen Size</a>
+                            </li>
                             <li><a href="./CSS_Variables.html">CSS Variables – Reusing Styles Like a Pro</a></li>
-                            <li><a href="./CSS_Best_Practices_I’m_Following_as_a_Beginner.html">CSS Best Practices I’m Following as a Beginner</a></li>
-                            <li><a href="./Building_My_First_Full_CSS_Styled_Web_Page.html">Building My First Full CSS-Styled Web Page – What I Learned</a></li>
+                            <li><a href="./CSS_Best_Practices_I’m_Following_as_a_Beginner.html">CSS Best Practices I’m
+                                    Following as a Beginner</a></li>
+                            <li><a href="./Building_My_First_Full_CSS_Styled_Web_Page.html">Building My First Full
+                                    CSS-Styled Web Page – What I Learned</a></li> -->
                         </ol>
                     </div>
                 </div>
@@ -541,20 +560,22 @@ h1 {
                     </p>
                     <p><a href="../EvansPosts-JavaScript/Introduction_to_JavaScript.html">JavaScript</a></p>
                 </div>
+
+                <!-- social links -->
                 <div class="links_container">
                     <h3>Follow me</h3>
-                    <p><a href="#">Twitter</a></p>
-                    <p><a href="#">Facebook</a></p>
-                    <p><a href="#">LinkedIn</a></p>
-                    <p><a href="#">Instagram</a></p>
+                    <p><a href="https://x.com/switzCodes">Twitter</a></p>
+                    <p><a href="https://www.facebook.com/profile.php?id=61580880964311">Facebook</a></p>
+                    <p><a href="https://www.linkedin.com/in/chiemeka-evans-9a7165391/">LinkedIn</a></p>
+                    <p><a href="https://www.instagram.com/switzcodes/">Instagram</a></p>
                 </div>
             </div>
             <p>&copy; 2025 switzCodes. All rights reserved.</p>
         </footer>
     </div>
 
-    <script src="../script/hamburgerToggle.js"></script>
-    <script src="../script/search_script.js"></script>
+    <script src="../script/hamburgerToggle.js" defer></script>
+    <script src="../script/search_script.js" defer></script>
 
     <!-- from mailerLite -->
 
