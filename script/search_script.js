@@ -147,11 +147,11 @@ const posts = [
         link: "https://switzcodes.com/posts/EvansPosts-CSS/CSS_Selectors.html",
         description: "Targeting the Right Elements"
     },
-    // {
-    //     title: "Colors in CSS ",
-    //     link: "https://switzcodes.com/posts/EvansPosts-CSS/Colors_in_CSS.html",
-    //     description: "From Names to Hex, RGB, and HSL"
-    // },
+    {
+        title: "Colors in CSS ",
+        link: "https://switzcodes.com/posts/EvansPosts-CSS/Colors_in_CSS.html",
+        description: "From Names to Hex, RGB, and HSL"
+    },
     // {
     //     title: "Styling Text",
     //     link: "https://switzcodes.com/posts/EvansPosts-CSS/Styling_Text.html",
@@ -246,4 +246,5 @@ if (window.innerWidth < 1000) {
 // if(window.innerWidth >= 1000) {
 //     mobileSearchContainer.style.display = 'none';
 // }
+
 
